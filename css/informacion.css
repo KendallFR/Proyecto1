@@ -1,0 +1,121 @@
+/* Ajuste del main para compensar header fijo (hereda tu layout) */
+.page-info .info-main {
+  padding: 120px 2rem 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos y texto */
+.page-info h1, .page-info h2 { color:#2E7D32; margin:0 0 .4rem }
+.page-info .muted { color:#6b7b6d }
+
+/* ====== SOBRE ECOPETS ====== */
+.page-info .about-block { padding: 20px 0 50px; }
+.page-info .ab-inner { width:100%; }
+.page-info .ab-grid {
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 16px;
+}
+.page-info .ab-card{
+  background:#fff;
+  border-radius:20px;
+  padding:18px 20px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.06);
+  border:1px solid rgba(46,125,50,0.06);
+}
+.page-info .ab-card h3{ color:#2E7D32; margin:0 0 .4rem }
+.page-info .ab-values{ margin:.2rem 0 0 1rem }
+
+/* ====== VENTAJAS ====== */
+.page-info .features-block { padding: 40px 0; }
+.page-info .fb-grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap:16px;
+}
+.page-info .feat{
+  background:#fffdf7;
+  border:1px solid rgba(249,168,37,0.25);
+  border-radius:18px;
+  padding:16px 18px;
+  box-shadow:0 8px 18px rgba(255,170,60,0.18);
+}
+.page-info .feat h3{ margin:0 0 .3rem; color:#2E7D32 }
+
+/* ====== GALERÍA ====== */
+.page-info .gallery-block { padding: 40px 0; }
+.page-info .gal-grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:16px;
+}
+.page-info .gal-item{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 20px rgba(0,0,0,0.07);
+  text-align:center;
+}
+.page-info .gal-item img{ width:100%; height:200px; object-fit:cover; display:block; transition:transform .4s }
+.page-info .gal-item:hover img{ transform:scale(1.05) }
+.page-info .gal-item figcaption{ padding:10px 12px; color:#2E7D32; font-weight:600 }
+
+/* ====== MULTIMEDIA ====== */
+.page-info .media-block { padding: 40px 0; }
+.page-info .media-flex{
+  display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; margin-top:16px;
+}
+.page-info .media-video{
+  width:100%; border-radius:20px; background:#000;
+  box-shadow:0 12px 26px rgba(0,0,0,0.12);
+}
+.page-info .media-audio{
+  background:#fff; border:1px solid rgba(46,125,50,0.08);
+  border-radius:20px; padding:16px; box-shadow:0 8px 18px rgba(0,0,0,0.06);
+}
+@media (max-width: 820px){ .page-info .media-flex{ grid-template-columns:1fr } }
+
+/* ====== TESTIMONIOS ====== */
+.page-info .testimonials-block { padding: 40px 0 10px; }
+.page-info .ts-grid{
+  margin-top:18px;
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:16px;
+}
+.page-info .ts-card{
+  background:#fff; border-left:6px solid #F9A825;
+  border-radius:16px; padding:16px 18px; box-shadow:0 10px 22px rgba(0,0,0,0.06);
+}
+.page-info .ts-card footer{ color:#6b7b6d; margin-top:.5rem; font-weight:600 }
+.page-info .ts-project{
+  background:#fffdf7; border:1px solid rgba(249,168,37,0.25);
+  border-radius:16px; padding:16px 18px; box-shadow:0 10px 22px rgba(255,170,60,0.18);
+}
+.page-info .ts-project h3{ color:#2E7D32; margin:.2rem 0 .6rem }
+
+/* ====== Animación reveal (usa tus clases existentes) ====== */
+.page-info .reveal{ opacity:0; transform:translateY(20px); transition:opacity .7s, transform .7s }
+.page-info .reveal.visible{ opacity:1; transform:none }
+
+/* ====== Ajuste del menú móvil verde (mismo fix que te pasé) ====== */
+@media (max-width: 768px){
+  .page-productos .menu-toggle{ display:inline-flex; z-index:1300 }
+  .page-productos .main-nav{ display:none }
+  .page-productos .mobile-nav{
+    position: fixed; top: 80px; right: 1rem; width: 220px;
+    background:#2E7D32; border-radius:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+    transform: translateX(120%); transition: transform .35s ease;
+    z-index:1300; display:flex; flex-direction:column; padding:1rem;
+  }
+  .page-productos .mobile-nav[aria-hidden="false"]{ transform: translateX(0) }
+  .page-productos .mobile-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px }
+  .page-productos .mobile-link{ display:block; padding:.75rem 1rem; font-size:1.05rem; font-weight:700; color:#fff; text-decoration:none; border-radius:12px; transition:background .3s, transform .3s }
+  .page-productos .mobile-link:hover,
+  .page-productos .mobile-link.active{ background:#F9A825; color:#2E7D32; transform: translateX(4px) }
+  .page-productos .mobile-cta{ display:block; margin:1rem auto 0; padding:.8rem 1.6rem; background:#F9A825; color:#2E7D32; font-weight:700; text-align:center; border-radius:30px; box-shadow:0 8px 20px rgba(249,168,37,.3); text-decoration:none }
+}
