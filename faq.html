@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos para el documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Preguntas Frecuentes - EcoPets CR</title>
+    
+    <!-- Enlaces a archivos CSS externos -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+    
+    <!-- Font Awesome: biblioteca de iconos para redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Material Icons: biblioteca de iconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <!-- ========================================
+         HEADER: Encabezado principal del sitio
+         ======================================== -->
+    <header>
+        <div class="header-container">
+            <!-- Logo de la empresa -->
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="imagenes/logo.png" alt="Logo EcoPets CR">
+                </div>
+                <h1>EcoPets CR</h1>
+            </div>
+
+            <!-- Navegación principal del sitio -->
+            <nav id="mainNav" role="navigation">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <!-- Página actual marcada con clase "active" -->
+                    <li><a href="faq.html" class="active">Preguntas Frecuentes</a></li>
+                    <li><a href="acerca-de.html">Acerca de</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa para menú móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================
+         MAIN: Contenedor principal de contenido
+         ======================================== -->
+    <main>
+        <!-- ========================================
+             HERO SECTION: Sección destacada de FAQ
+             ======================================== -->
+        <section class="faq-hero">
+            <div class="container">
+                <h1>🐾 Preguntas Frecuentes</h1>
+                <p>Encuentra respuestas a las dudas más comunes sobre nuestros productos ecológicos</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CONTENEDOR PRINCIPAL DE FAQ
+             ======================================== -->
+        <div class="faq-container">
+            <!-- Introducción a la sección de FAQ -->
+            <div class="faq-intro">
+                <h2 class="section-title">¿Tienes dudas? ¡Estamos aquí para ayudarte!</h2>
+                <p>Hemos recopilado las preguntas más frecuentes de nuestros clientes para que encuentres la información que necesitas rápidamente.</p>
+            </div>
+
+            <!-- ========================================
+                 PREGUNTA 1: Productos ecológicos
+                 ======================================== -->
+            <div class="faq-item">
+                <!-- Pregunta clickeable con icono de expansión -->
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>¿Qué hace que los productos de EcoPets CR sean realmente ecológicos?</h3>
+                    <span class="material-symbols-outlined faq-icon">add</span>
+                </div>
+                <!-- Respuesta colapsable -->
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>En <strong>EcoPets CR</strong> nos tomamos muy en serio nuestro compromiso con el medio ambiente. Todos nuestros productos cumplen con estrictos estándares de sostenibilidad:</p>
+                        <!-- Lista de características ecológicas -->
+                        <ul>
+                            <li><strong>Materiales biodegradables:</strong> Utilizamos ingredientes que se descomponen naturalmente sin contaminar</li>
+                            <li><strong>Libre de químicos tóxicos:</strong> Sin parabenos, sulfatos, ftalatos ni fragancias artificiales</li>
+                            <li><strong>Empaques reciclables:</strong> Envases de cartón reciclado, vidrio y plástico PET reciclado</li>
+                            <li><strong>Producción ética:</strong> No testamos en animales y apoyamos el comercio justo</li>
+                            <li><strong>Huella de carbono reducida:</strong> Priorizamos proveedores locales para minimizar transporte</li>
+                        </ul>
+                        <p><em>Además</em>, por cada compra que realizas, <u>plantamos un árbol</u> en Costa Rica a través de nuestra alianza con organizaciones ambientales locales.</p>
+                        <!-- Enlace a página relacionada -->
+                        <p>Conoce más sobre nuestro compromiso ambiental en nuestra página de <a href="nosotros.html">Nosotros</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 PREGUNTA 2: Envíos y entregas
+                 ======================================== -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>¿Hacen envíos a todo Costa Rica? ¿Cuánto tiempo tarda?</h3>
+                    <span class="material-symbols-outlined faq-icon">add</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>¡Sí! Realizamos envíos a <strong>todas las provincias de Costa Rica</strong> con opciones ecológicas de transporte.</p>
+                        
+                        <p><strong>Tiempos de entrega según ubicación:</strong></p>
+                        <!-- Tabla con información de envíos -->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Zona</th>
+                                    <th>Tiempo de Entrega</th>
+                                    <th>Costo de Envío</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gran Área Metropolitana (GAM)</td>
+                                    <td>1-2 días hábiles</td>
+                                    <td>₡2,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Zonas costeras y rurales</td>
+                                    <td>3-5 días hábiles</td>
+                                    <td>₡4,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Zonas de difícil acceso</td>
+                                    <td>5-7 días hábiles</td>
+                                    <td>₡5,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Promoción de envío gratis -->
+                        <p><em>¡Envío gratis en compras superiores a ₡35,000!</em></p>
+                        
+                        <!-- Opciones adicionales de retiro -->
+                        <p><strong>Opciones de retiro:</strong></p>
+                        <ul>
+                            <li><em>Retiro en tienda:</em> Sin costo adicional - San José, Escazú</li>
+                            <li><em>Entrega express (GAM):</em> Mismo día por ₡5,000 (pedidos antes de las 11:00 AM)</li>
+                        </ul>
+                        
+                        <p>Todos nuestros envíos utilizan <strong>empaques 100% reciclables</strong> y priorizamos rutas eficientes para reducir emisiones. 🌱</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 PREGUNTA 3: Seguridad de productos
+                 ======================================== -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>¿Los productos ecológicos son seguros para todas las mascotas?</h3>
+                    <span class="material-symbols-outlined faq-icon">add</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>¡Por supuesto!</strong> La seguridad de tu mascota es nuestra prioridad número uno.</p>
+                        
+                        <p>Nuestros productos están diseñados para ser <em>gentiles y efectivos</em> con diferentes tipos de mascotas:</p>
+                        
+                        <!-- Lista de tipos de mascotas compatibles -->
+                        <ul>
+                            <li><strong>Perros de todas las razas:</strong> Desde cachorros hasta adultos mayores</li>
+                            <li><strong>Gatos:</strong> Fórmulas especiales sin ingredientes tóxicos para felinos</li>
+                            <li><strong>Mascotas con piel sensible:</strong> Productos hipoalergénicos disponibles</li>
+                            <li><strong>Animales pequeños:</strong> Línea especial para conejos, hámsters y aves</li>
+                        </ul>
+
+                        <!-- Características de seguridad (lista numerada) -->
+                        <p><strong>Características de seguridad:</strong></p>
+                        <ol>
+                            <li>Todos los productos pasan por <u>pruebas dermatológicas veterinarias</u></li>
+                            <li>pH balanceado para no irritar la piel de tu mascota</li>
+                            <li>Sin colorantes artificiales ni fragancias sintéticas</li>
+                            <li>Certificados por organismos internacionales de bienestar animal</li>
+                        </ol>
+
+                        <!-- Advertencia importante con enlace a contacto -->
+                        <p><em>Importante:</em> Si tu mascota tiene condiciones médicas específicas o alergias conocidas, consulta con tu veterinario antes de usar productos nuevos. Estamos disponibles en el <a href="contacto.html">formulario de contacto</a> para resolver dudas específicas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 PREGUNTA 4: Comparación de productos
+                 ======================================== -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>¿Cuál es la diferencia entre productos convencionales y los de EcoPets CR?</h3>
+                    <span class="material-symbols-outlined faq-icon">add</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>La diferencia es <strong>significativa</strong> tanto para tu mascota como para el planeta. Aquí te lo explicamos:</p>
+
+                        <!-- Tabla comparativa detallada -->
+                        <p><strong>Comparación de ingredientes:</strong></p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspecto</th>
+                                    <th>Productos Convencionales</th>
+                                    <th>Productos EcoPets CR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ingredientes</strong></td>
+                                    <td>Químicos sintéticos, parabenos</td>
+                                    <td>Naturales, orgánicos certificados</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fragancias</strong></td>
+                                    <td>Artificiales, pueden causar alergias</td>
+                                    <td>Aceites esenciales naturales</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Empaque</strong></td>
+                                    <td>Plástico no reciclable</td>
+                                    <td>100% reciclable y biodegradable</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Testeo animal</strong></td>
+                                    <td>Frecuente en la industria</td>
+                                    <td>Cruelty-free certificado</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Impacto ambiental</strong></td>
+                                    <td>Alto (contaminación acuática)</td>
+                                    <td>Mínimo (biodegradable)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Beneficios adicionales -->
+                        <p><em>Beneficios adicionales de nuestros productos:</em></p>
+                        <ul>
+                            <li>Menos residuos químicos en el pelaje de tu mascota</li>
+                            <li>Reducción de alergias y problemas dermatológicos</li>
+                            <li>Contribuyes a reducir la contaminación del agua</li>
+                            <li>Apoyas una economía más sostenible y ética</li>
+                        </ul>
+
+                        <!-- Información sobre precio y valor -->
+                        <p><strong>Precio:</strong> Aunque nuestros productos pueden costar entre 15-30% más que los convencionales, la <u>calidad superior</u> y el <u>menor impacto ambiental</u> justifican la inversión. ¡Tu mascota y el planeta lo agradecerán! 🌍💚</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 PREGUNTA 5: Garantía y devoluciones
+                 ======================================== -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>¿Ofrecen garantía de satisfacción? ¿Puedo devolver un producto?</h3>
+                    <span class="material-symbols-outlined faq-icon">add</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>¡Absolutamente!</strong> Confiamos plenamente en la calidad de nuestros productos, por eso ofrecemos una <em>garantía de satisfacción del 100%</em>.</p>
+
+                        <!-- Política de devoluciones (lista ordenada) -->
+                        <p><strong>Política de devoluciones:</strong></p>
+                        <ol>
+                            <li><strong>Plazo:</strong> Tienes <u>30 días</u> desde la fecha de compra para devolver cualquier producto</li>
+                            <li><strong>Condición:</strong> El producto debe estar en su empaque original y sin usar (excepto si es defectuoso)</li>
+                            <li><strong>Reembolso:</strong> Te devolvemos el 100% del dinero o te ofrecemos un cambio por otro producto</li>
+                            <li><strong>Proceso:</strong> Contáctanos por WhatsApp, email o llámanos para iniciar la devolución</li>
+                        </ol>
+
+                        <!-- Excepciones a la política -->
+                        <p><strong>Excepciones importantes:</strong></p>
+                        <ul>
+                            <li>Productos en oferta o liquidación (solo cambios, no reembolsos)</li>
+                            <li>Alimentos una vez abiertos (por razones de seguridad alimentaria)</li>
+                            <li>Productos personalizados o hechos a medida</li>
+                        </ul>
+
+                        <!-- Casos especiales -->
+                        <p><em>Casos especiales:</em> Si tu mascota tiene una <strong>reacción alérgica</strong> documentada por un veterinario, aceptamos la devolución incluso si el producto fue usado. Tu tranquilidad y la salud de tu mascota son lo más importante para nosotros.</p>
+
+                        <!-- Información de contacto para devoluciones -->
+                        <p>Para iniciar una devolución, completa nuestro <a href="contacto.html">formulario de contacto</a> o llámanos al <strong>+506 8888-9999</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 PREGUNTA 6: Programa de fidelidad
+                 ======================================== -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>¿Tienen programa de fidelidad o descuentos para compras frecuentes?</h3>
+                    <span class="material-symbols-outlined faq-icon">add</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>¡Sí! Valoramos la lealtad de nuestros clientes y queremos recompensarte por cuidar a tu mascota de forma sostenible.</p>
+
+                        <!-- Beneficios del programa de fidelidad -->
+                        <p><strong>Programa "Amigos Eco" - Beneficios:</strong></p>
+                        <ul>
+                            <li><em>Inscripción gratuita:</em> Regístrate en nuestra tienda online o en persona</li>
+                            <li><em>10% de descuento:</em> En tu segunda compra</li>
+                            <li><em>Acumulación de puntos:</em> Por cada ₡1,000 = 10 puntos = ₡100 en futuras compras</li>
+                            <li><em>Ofertas exclusivas:</em> Acceso anticipado a nuevos productos y promociones</li>
+                            <li><em>Regalo de cumpleaños:</em> Sorpresa especial en el mes de cumpleaños de tu mascota</li>
+                            <li><em>Envío gratis:</em> A partir de tu quinta compra (sin mínimo)</li>
+                        </ul>
+
+                        <!-- Tabla de descuentos por tipo de cliente -->
+                        <p><strong>Descuentos adicionales disponibles:</strong></p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Cliente</th>
+                                    <th>Descuento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Primera compra</td>
+                                    <td>15% con código BIENVENIDO</td>
+                                </tr>
+                                <tr>
+                                    <td>Estudiantes</td>
+                                    <td>10% (con carné vigente)</td>
+                                </tr>
+                                <tr>
+                                    <td>Adultos mayores</td>
+                                    <td>12% (mayores de 65 años)</td>
+                                </tr>
+                                <tr>
+                                    <td>Refugios de animales</td>
+                                    <td>25% (con certificación)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Promociones mensuales -->
+                        <p><em>Promociones mensuales:</em> Cada mes destacamos diferentes productos con <strong>descuentos de hasta el 30%</strong>. Suscríbete a nuestro newsletter para estar al tanto de todas las ofertas.</p>
+
+                        <!-- Programa de referidos -->
+                        <p><strong>Programa de referidos:</strong> Por cada amigo que refieras, <u>ambos reciben ₡5,000</u> en crédito para tu próxima compra. ¡Comparte el amor eco con tus amigos! 💚</p>
+
+                        <!-- Enlace a productos -->
+                        <p>Visita nuestra sección de <a href="nosotros.html">productos</a> para ver las ofertas actuales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 CTA FINAL: Llamado a la acción
+                 ======================================== -->
+            <div class="faq-cta">
+                <h2>¿No encontraste la respuesta que buscabas?</h2>
+                <p>Nuestro equipo está listo para resolver todas tus dudas personalmente</p>
+                
+                <!-- Métodos de contacto disponibles -->
+                <div class="contact-methods">
+                    <!-- Opción 1: Llamada telefónica -->
+                    <div class="contact-method">
+                        <span class="material-symbols-outlined">call</span>
+                        <div>
+                            <strong>Llámanos</strong><br>
+                            +506 8888-9999
+                        </div>
+                    </div>
+                    <!-- Opción 2: WhatsApp -->
+                    <div class="contact-method">
+                        <span class="material-symbols-outlined">chat</span>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            Chatea con nosotros
+                        </div>
+                    </div>
+                    <!-- Opción 3: Email -->
+                    <div class="contact-method">
+                        <span class="material-symbols-outlined">mail</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            info@ecopetscr.com
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón de contacto principal -->
+                <a href="contacto.html" class="btn btn-secondary" style="margin-top: 2rem; display: inline-block; padding: 1rem 2rem; background: var(--amarillo-claro); color: var(--negro); text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;">Contáctanos Ahora</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========================================
+         FOOTER: Pie de página
+         ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Sección 1: Información de la empresa -->
+            <div class="footer-section">
+                <h3>EcoPets CR</h3>
+                <p>Productos ecológicos y sostenibles para el cuidado de tus mascotas.</p>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">eco</span>
+                    Cuida a tu mascota, cuida el planeta
+                </p>
+            </div>
+
+            <!-- Sección 2: Enlaces rápidos -->
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="nosotros.html">Nosotros</a></p>
+                <p><a href="blog.html">Blog</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+
+            <!-- Sección 3: Información de contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">mail</span>
+                    info@ecopetscr.com
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">phone</span>
+                    +506 8888-9999
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">location_on</span>
+                    San José, Costa Rica
+                </p>
+            </div>
+
+            <!-- Sección 4: Redes sociales -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/" aria-label="Instagram" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- X (Twitter) -->
+                    <a href="https://X.com/" aria-label="X (Twitter)" class="social-icon twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoPets CR | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         SCRIPTS: Archivos JavaScript
+         ======================================== -->
+    <!-- Script principal con funcionalidad del menú -->
+    <script src="js/main.js"></script>
+    
+    <!-- Scripts específicos de la página FAQ -->
+    <script>
+        /**
+         * Función para alternar el menú de navegación móvil
+         * Se ejecuta al hacer clic en el botón hamburguesa
+         */
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        /**
+         * Función para expandir/colapsar items de FAQ
+         * @param {HTMLElement} element - El elemento de pregunta clickeado
+         * 
+         * Comportamiento:
+         * - Cierra todos los otros items FAQ abiertos
+         * - Alterna el estado del item clickeado (abre/cierra)
+         * - Cambia el icono de + a - automáticamente vía CSS
+         */
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            // Cerrar todos los otros items (comportamiento de acordeón)
+            allItems.forEach(item => {
+                if (item !== faqItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle el item actual (abrir si está cerrado, cerrar si está abierto)
+            faqItem.classList.toggle('active');
+        }
+
+        /**
+         * Event listener para cerrar FAQ al hacer clic fuera
+         * Mejora la experiencia de usuario permitiendo cerrar items
+         * al hacer clic en cualquier parte fuera de los FAQ
+         */
+        document.addEventListener('click', function(event) {
+            // Verificar si el clic fue fuera de cualquier item FAQ
+            if (!event.target.closest('.faq-item')) {
+                // Cerrar todos los items activos
+                document.querySelectorAll('.faq-item.active').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

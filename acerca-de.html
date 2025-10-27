@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos para el documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Acerca de - EcoPets CR</title>
+    
+    <!-- Enlaces a archivos CSS externos -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/acerca-de.css">
+    
+    <!-- Font Awesome: biblioteca de iconos para redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Material Icons: biblioteca de iconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <!-- ========================================
+         HEADER: Encabezado principal del sitio
+         ======================================== -->
+    <header>
+        <div class="header-container">
+            <!-- Logo de la empresa -->
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="imagenes/logo.png" alt="Logo EcoPets CR">
+                </div>
+                <h1>EcoPets CR</h1>
+            </div>
+
+            <!-- Navegación principal del sitio -->
+            <nav id="mainNav" role="navigation">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <!-- Página actual marcada con clase "active" -->
+                    <li><a href="acerca-de.html" class="active">Acerca de</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa para menú móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================
+         MAIN: Contenedor principal de contenido
+         ======================================== -->
+    <main>
+        <!-- ========================================
+             HERO SECTION: Sección destacada de "Acerca de"
+             ======================================== -->
+        <section class="about-hero">
+            <div class="container">
+                <h1>👨‍💻 Acerca de</h1>
+                <p>Información de los desarrolladores del proyecto</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CONTENEDOR PRINCIPAL: Información de desarrolladores
+             ======================================== -->
+        <div class="about-container">
+            <!-- Grid responsivo que contiene las tarjetas de desarrolladores -->
+            <div class="developers-grid">
+                
+                <!-- ========================================
+                     TARJETA DESARROLLADOR 1: Adrián Rojas Murillo
+                     ======================================== -->
+                <div class="developer-card">
+                    <!-- Contenedor de la foto del desarrollador -->
+                    <div class="developer-photo-container">
+                        <img src="imagenes/adrian-rojas.jpeg" alt="Adrián Rojas Murillo" class="developer-photo">
+                    </div>
+                    
+                    <!-- Nombre del desarrollador -->
+                    <h3 class="developer-name">Adrián Rojas Murillo</h3>
+                    
+                    <!-- Información básica: Cédula y correo -->
+                    <div class="developer-info">
+                        <!-- Número de identificación -->
+                        <div class="info-item">
+                            <strong>Cédula:</strong> 2-0854-0031
+                        </div>
+                        <!-- Correo electrónico con enlace mailto -->
+                        <div class="info-item">
+                            <strong>Correo:</strong> <a href="mailto:rojasmadrian28@gmail.com">rojasmadrian28@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Información adicional académica y profesional -->
+                    <div class="additional-info">
+                        <h4>Información Adicional</h4>
+                        
+                        <!-- Carrera que cursa -->
+                        <p><strong>Carrera:</strong> Ingeniería del Software</p>
+                        
+                        <!-- Institución educativa -->
+                        <p><strong>Institución:</strong> Universidad Técnica Nacional - Sede Central</p>
+                        
+                        <!-- Año y ciclo académico -->
+                        <p><strong>Año:</strong> 2025 - Ciclo II</p>
+                        
+                        <!-- Curso específico para el cual se desarrolla el proyecto -->
+                        <p><strong>Curso:</strong> ISW-512 Diseño de Aplicaciones Web</p>
+                        
+                        <!-- Sección de contacto y redes sociales -->
+                        <div class="contact-info">
+                            <p><strong>Contacto:</strong></p>
+                            <div class="social-links-dev">
+                                <!-- Enlace a perfil de GitHub (se abre en nueva pestaña) -->
+                                <a href="https://github.com/aerm28" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================
+                     TARJETA DESARROLLADOR 2: Kendall Fernández
+                     ======================================== -->
+                <div class="developer-card">
+                    <!-- Contenedor de la foto del desarrollador -->
+                    <div class="developer-photo-container">
+                        <img src="imagenes/kendall-fernandez.jpeg" alt="Kendall Fernández" class="developer-photo">
+                    </div>
+                    
+                    <!-- Nombre del desarrollador -->
+                    <h3 class="developer-name">Kendall Fernández</h3>
+                    
+                    <!-- Información básica: Cédula y correo -->
+                    <div class="developer-info">
+                        <!-- Número de identificación -->
+                        <div class="info-item">
+                            <strong>Cédula:</strong> 2-0834-0473
+                        </div>
+                        <!-- Correo electrónico institucional con enlace mailto -->
+                        <div class="info-item">
+                            <strong>Correo:</strong> <a href="mailto:kefernandezro@est.utn.ac.cr">kefernandezro@est.utn.ac.cr</a>
+                        </div>
+                    </div>
+
+                    <!-- Información adicional académica y profesional -->
+                    <div class="additional-info">
+                        <h4>Información Adicional</h4>
+                        
+                        <!-- Carrera que cursa -->
+                        <p><strong>Carrera:</strong> Ingeniería del Software</p>
+                        
+                        <!-- Institución educativa -->
+                        <p><strong>Institución:</strong> Universidad Técnica Nacional - Sede Central</p>
+                        
+                        <!-- Año y ciclo académico -->
+                        <p><strong>Año:</strong> 2025 - Ciclo II</p>
+                        
+                        <!-- Curso específico para el cual se desarrolla el proyecto -->
+                        <p><strong>Curso:</strong> ISW-512 Diseño de Aplicaciones Web</p>
+                        
+                        <!-- Sección de contacto y redes sociales -->
+                        <div class="contact-info">
+                            <p><strong>Contacto:</strong></p>
+                            <div class="social-links-dev">
+                                <!-- Enlace a perfil de GitHub (se abre en nueva pestaña) -->
+                                <a href="https://github.com/KendallFR" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========================================
+         FOOTER: Pie de página
+         ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Sección 1: Información de la empresa -->
+            <div class="footer-section">
+                <h3>EcoPets CR</h3>
+                <p>Productos ecológicos y sostenibles para el cuidado de tus mascotas.</p>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">eco</span>
+                    Cuida a tu mascota, cuida el planeta
+                </p>
+            </div>
+
+            <!-- Sección 2: Enlaces rápidos a páginas principales -->
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="nosotros.html">Nosotros</a></p>
+                <p><a href="blog.html">Blog</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+
+            <!-- Sección 3: Información de contacto de la empresa -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <!-- Email de contacto -->
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">mail</span>
+                    info@ecopetscr.com
+                </p>
+                <!-- Teléfono de contacto -->
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">phone</span>
+                    +506 8888-9999
+                </p>
+                <!-- Ubicación física -->
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">location_on</span>
+                    San José, Costa Rica
+                </p>
+            </div>
+
+            <!-- Sección 4: Redes sociales de la empresa -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <!-- Enlace a Facebook -->
+                    <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Enlace a Instagram -->
+                    <a href="https://www.instagram.com/" aria-label="Instagram" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Enlace a X (Twitter) -->
+                    <a href="https://X.com/" aria-label="X (Twitter)" class="social-icon twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoPets CR | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         SCRIPTS: Archivos JavaScript
+         ======================================== -->
+    <!-- Script principal que incluye funcionalidad del menú móvil -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

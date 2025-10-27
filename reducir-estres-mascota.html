@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos para el documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO: Descripción para motores de búsqueda -->
+    <meta name="description"
+        content="Aprende a identificar y reducir el estrés en perros y gatos. Consejos prácticos y estrategias naturales en EcoPets CR.">
+    
+    <!-- SEO: Palabras clave relevantes -->
+    <meta name="keywords" content="estrés mascotas, ansiedad perros, estrés gatos, bienestar animal, EcoPets">
+    
+    <!-- Autor del contenido -->
+    <meta name="author" content="Dra. Sofía Campos">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Cómo Reducir el Estrés en Tu Mascota - EcoPets CR</title>
+    
+    <!-- Enlace al archivo CSS externo y libreria externa-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/articulo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+    <!-- Google Material Icons: biblioteca de iconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- ========================================
+         HEADER: Encabezado principal del sitio
+         ======================================== -->
+    <header>
+        <div class="header-container">
+            <!-- Logo de la empresa -->
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="imagenes/logo.png" alt="Logo EcoPets CR">
+                </div>
+                <h1>EcoPets CR</h1>
+            </div>
+
+            <!-- Navegación principal del sitio -->
+            <nav id="mainNav" role="navigation">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="acerca-de.html">Acerca de</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa para menú móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION: Sección destacada del artículo
+         ======================================== -->
+    <section class="article-hero" style="background-image: url('imagenes/mascota-estresada.jpg');">
+  
+        <div class="article-hero-content">
+            <!-- Botón para volver al blog -->
+            <a href="blog.html" class="btn-back">
+                <span class="material-symbols-outlined">arrow_back</span> Regresar al Blog
+            </a>
+            
+            <!-- Etiqueta de categoría -->
+            <span class="category-badge">Bienestar Emocional</span>
+            
+            <!-- Título principal del artículo (H1: debe ser único en la página) -->
+            <h1>Cómo Reducir el Estrés en Tu Mascota</h1>
+            
+            <!-- Metadatos del artículo -->
+            <div class="article-meta">
+                <span>
+                    <span class="material-symbols-outlined">person</span> Por: Dra. Sofía Campos
+                </span>
+                <span>
+                    <span class="material-symbols-outlined">calendar_today</span> 12 de Octubre, 2025
+                </span>
+                <span>
+                    <span class="material-symbols-outlined">comment</span> 4 Comentarios
+                </span>
+                <span>
+                    <span class="material-symbols-outlined">schedule</span> 7 min lectura
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTENEDOR PRINCIPAL DEL ARTÍCULO
+         ======================================== -->
+    <div class="article-wrapper">
+        <div class="article-layout">
+            <!-- ========================================
+                 MAIN: Contenido principal del artículo
+                 ======================================== -->
+            <main>
+                <article class="article-main">
+                    
+                    <div class="article-content">
+                        <!-- ========================================
+                             SECCIÓN: Introducción
+                             ======================================== -->
+                        <section id="introduccion">
+                            <h2>Introducción</h2>
+                            <p>
+                                El estrés en mascotas es una condición cada vez más común, especialmente en entornos
+                                urbanos o con rutinas cambiantes. Perros y gatos pueden manifestar ansiedad a través de
+                                comportamientos como ladridos excesivos, agresividad, pérdida de apetito o aislamiento.
+                                Reconocer estas señales y aplicar estrategias adecuadas puede mejorar significativamente
+                                su bienestar emocional.
+                            </p>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Causas del estrés
+                             ======================================== -->
+                        <section id="causas">
+                            <h2>¿Por qué se estresan las mascotas?</h2>
+                            <p>
+                                Las causas del estrés pueden variar según la especie, edad y entorno del animal. Identificar
+                                los desencadenantes específicos es el primer paso para poder abordar el problema de manera
+                                efectiva. Entre las más comunes están:
+                            </p>
+
+                            <!-- Tabla semántica con información estructurada -->
+                            <table class="therapy-table">
+                                <thead>
+                                    <tr>
+                                        <th>Causa</th>
+                                        <th>Descripción</th>
+                                        <th>Especies más afectadas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Cambios en la rutina o el hogar</strong></td>
+                                        <td>Mudanzas, nuevos miembros en la familia, cambios de horarios</td>
+                                        <td>Perros y Gatos</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ruidos fuertes</strong></td>
+                                        <td>Tormentas, fuegos artificiales, construcciones</td>
+                                        <td>Principalmente Perros</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Falta de ejercicio</strong></td>
+                                        <td>Insuficiente actividad física o estimulación mental</td>
+                                        <td>Perros activos</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Separación prolongada</strong></td>
+                                        <td>Ausencia extendida de sus cuidadores principales</td>
+                                        <td>Perros y Gatos</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Interacciones sociales negativas</strong></td>
+                                        <td>Encuentros forzados con otros animales o personas</td>
+                                        <td>Principalmente Gatos</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Consejos prácticos
+                             ======================================== -->
+                        <section id="consejos">
+                            <h2>Consejos para reducir el estrés</h2>
+                            <p>
+                                Implementar estrategias efectivas puede marcar una diferencia significativa en el estado
+                                emocional de tu mascota. A continuación, te presentamos las técnicas más recomendadas por
+                                especialistas en comportamiento animal:
+                            </p>
+
+                            <!-- Subsección: Rutinas -->
+                            <h3>1. Rutinas estables</h3>
+                            <p>
+                                Mantener horarios regulares para comida, paseos y descanso ayuda a generar seguridad. Los
+                                animales son criaturas de hábitos y la predictibilidad les proporciona una sensación de
+                                control sobre su entorno.
+                            </p>
+
+                            <!-- Subsección: Espacios -->
+                            <h3>2. Espacios tranquilos</h3>
+                            <p>
+                                Crear un rincón cómodo y silencioso donde la mascota pueda relajarse sin interrupciones es
+                                fundamental. Este espacio debe incluir su cama favorita, juguetes reconfortantes y estar
+                                ubicado lejos de áreas de alto tráfico en el hogar.
+                            </p>
+
+                            <img src="imagenes/espacio-tranquilo.jpg"
+                                alt="Zona de descanso acogedora para mascotas con cama y juguetes"
+                                style="width: 100%; border-radius: 10px; margin: 2rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+                            <!-- Subsección: Ejercicio -->
+                            <h3>3. Ejercicio y juego</h3>
+                            <p>
+                                Actividades físicas y mentales adaptadas a su edad y energía reducen la tensión acumulada.
+                                El ejercicio libera endorfinas naturales que mejoran el estado de ánimo y promueven un sueño
+                                reparador.
+                            </p>
+
+                            <!-- Subsección: Aromaterapia -->
+                            <h3>4. Aromaterapia segura</h3>
+                            <p>
+                                Aceites como lavanda o manzanilla, usados correctamente, pueden inducir calma. Es
+                                fundamental utilizar productos específicamente formulados para mascotas y en las
+                                concentraciones adecuadas, ya que algunos aceites esenciales pueden ser tóxicos para
+                                ciertos animales.
+                            </p>
+
+                            <!-- Subsección: Contacto emocional -->
+                            <h3>5. Contacto emocional</h3>
+                            <p>
+                                Caricias, palabras suaves y presencia constante fortalecen el vínculo y reducen la
+                                ansiedad. El contacto físico apropiado estimula la liberación de oxitocina, hormona
+                                asociada con el bienestar y la reducción del estrés.
+                            </p>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Técnicas adicionales
+                             ======================================== -->
+                        <section id="tecnicas-adicionales">
+                            <h2>Técnicas adicionales recomendadas</h2>
+                            
+                            <!-- Tabla con técnicas y su efectividad -->
+                            <table class="therapy-table">
+                                <thead>
+                                    <tr>
+                                        <th>Técnica</th>
+                                        <th>Aplicación</th>
+                                        <th>Efectividad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Música relajante</strong></td>
+                                        <td>Reproducir música clásica o sonidos naturales a bajo volumen</td>
+                                        <td>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Juguetes interactivos</strong></td>
+                                        <td>Puzzles y dispensadores de premios para estimulación mental</td>
+                                        <td>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Masajes terapéuticos</strong></td>
+                                        <td>Técnicas suaves de masaje en áreas específicas del cuerpo</td>
+                                        <td>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Feromonas sintéticas</strong></td>
+                                        <td>Difusores o sprays con feromonas calmantes</td>
+                                        <td>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                            <span class="material-symbols-outlined" style="color: gold;">star</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Conclusión
+                             ======================================== -->
+                        <section id="conclusion">
+                            <h2>Conclusión</h2>
+                            <p>
+                                Reducir el estrés en tu mascota no requiere grandes inversiones, sino atención consciente
+                                y hábitos saludables. Con pequeños cambios en el entorno y la rutina, podés mejorar su
+                                calidad de vida y fortalecer el vínculo afectivo.
+                            </p>
+                            <p>
+                                Siempre es recomendable consultar con un veterinario si los síntomas persisten o se
+                                intensifican. En EcoPets CR, contamos con especialistas en comportamiento animal que pueden
+                                brindarte orientación personalizada para el bienestar emocional de tu compañero.
+                            </p>
+                        </section>
+                    </div>
+
+                    <!-- ========================================
+                         SECCIÓN: Comentarios de usuarios
+                         ======================================== -->
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h2>
+                                <span class="material-symbols-outlined">comment</span> Comentarios
+                            </h2>
+                            <!-- Badge con el número de comentarios -->
+                            <span style="background: var(--naranja-suave); color: var(--blanco); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600;">4</span>
+                        </div>
+
+                        <!-- Comentario individual #1 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/perfil.png" alt="Carlos Jiménez" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Carlos Jiménez</h4>
+                                    <span class="comment-date">11 de Octubre, 2025 - 4:30 PM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                Excelentes consejos! Mi golden retriever sufría mucho con los fuegos artificiales de fin
+                                de año. Implementé el espacio tranquilo con música relajante y la diferencia fue notable.
+                                Ahora está mucho más calmado durante los eventos ruidosos.
+                            </p>
+                        </div>
+
+                        <!-- Comentario individual #2 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/nina.png" alt="Andrea Rojas" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Andrea Rojas</h4>
+                                    <span class="comment-date">11 de Octubre, 2025 - 1:15 PM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                La tabla de causas de estrés es muy útil. Mi gato presentaba comportamientos extraños
+                                después de que adoptamos un cachorro. Ahora entiendo que necesitaba más espacios propios
+                                y rutinas estables. Gracias por compartir esta información tan práctica.
+                            </p>
+                        </div>
+
+                        <!-- Comentario individual #3 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/perfil.png" alt="Miguel Soto" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Miguel Soto</h4>
+                                    <span class="comment-date">10 de Octubre, 2025 - 9:20 AM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                ¿La aromaterapia realmente funciona? Me da un poco de miedo usar aceites esenciales con
+                                mis mascotas. ¿Tienen alguna marca específica que recomienden que sea segura?
+                            </p>
+                        </div>
+
+                        <!-- Comentario individual #4 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/nina.png" alt="Fernanda Castro" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Fernanda Castro</h4>
+                                    <span class="comment-date">9 de Octubre, 2025 - 6:45 PM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                Los juguetes interactivos han sido un salvavidas para mi border collie. Tiene mucha
+                                energía y cuando no puede salir por el clima, estos juguetes lo mantienen ocupado y
+                                reducen su ansiedad considerablemente. Totalmente recomendado el enfoque integral.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================================
+                         FORMULARIO: Nuevo comentario
+                         ======================================== -->
+                    <div class="comment-form">
+                        <h3>Deja tu Comentario</h3>
+                        <!-- Formulario con validación HTML5 -->
+                        <form id="commentForm">
+                            <!-- Campo: Nombre -->
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                            </div>
+
+                            <!-- Campo: Email -->
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+
+                            <!-- Campo: Comentario -->
+                            <div class="form-group">
+                                <label for="comentario">Comentario:</label>
+                                <textarea id="comentario" name="comentario" required
+                                    placeholder="Escribe tu comentario aquí..." rows="5"></textarea>
+                            </div>
+
+                            <!-- Botón de envío -->
+                            <button type="submit" class="btn btn-primary">Publicar</button>
+                        </form>
+                    </div>
+                </article>
+            </main>
+
+            <!-- ========================================
+                 ASIDE: Barra lateral con información adicional
+                 ======================================== -->
+            <aside class="article-sidebar">
+                <!-- Card: Índice de contenidos -->
+                <div class="sidebar-card">
+                    <h3>Índice del Artículo</h3>
+                    <!-- Lista de enlaces de navegación interna -->
+                    <ul class="table-of-contents">
+                        <li><a href="#introduccion">Introducción</a></li>
+                        <li><a href="#causas">¿Por qué se estresan las mascotas?</a></li>
+                        <li><a href="#consejos">Consejos para reducir el estrés</a></li>
+                        <li><a href="#tecnicas-adicionales">Técnicas adicionales</a></li>
+                        <li><a href="#conclusion">Conclusión</a></li>
+                    </ul>
+                </div>
+
+                <!-- Card: Información del autor -->
+                <div class="sidebar-card author-card">
+                    <h3>Sobre el Autor</h3>
+                    <img src="imagenes/nina.png" alt="Dra. Sofía Campos" class="author-avatar">
+                    <div class="author-name">Dra. Sofía Campos</div>
+                    <div class="author-role">Especialista en Comportamiento Animal</div>
+                    <div class="author-exp">10 años de experiencia</div>
+                    <a href="contacto.html" class="btn btn-primary" style="width: 100%;">Contactar</a>
+                </div>
+
+                <!-- Card: Call-to-Action (llamado a la acción) -->
+                <div class="sidebar-card cta-card">
+                    <h3>
+                        <span class="material-symbols-outlined">pets</span> ¿Tu mascota necesita ayuda?
+                    </h3>
+                    <p>Consulta con nuestros especialistas en comportamiento para soluciones personalizadas.</p>
+                    <a href="contacto.html" class="btn btn-outline"
+                        style="background: var(--blanco); color: var(--verde-bosque); width: 100%;">Agendar Consulta</a>
+                </div>
+
+                <!-- Card: Artículos relacionados -->
+                <div class="sidebar-card">
+                    <h3>Artículos Relacionados</h3>
+
+                    <!-- Artículo relacionado #1 -->
+                    <div class="related-article" onclick="window.location.href='holistica.html'">
+                        <img src="imagenes/perro-holistica.webp" alt="Medicina holística">
+                        <div class="related-content">
+                            <h4>
+                                <span class="material-symbols-outlined" style="font-size: 1rem;">spa</span> 
+                                Medicina Holística para Mascotas
+                            </h4>
+                            <p>5 min lectura</p>
+                        </div>
+                    </div>
+
+                    <!-- Artículo relacionado #2 -->
+                    <div class="related-article" onclick="window.location.href='dieta-barf.html'">
+                        <img src="imagenes/dieta-barf.webp" alt="Dieta BARF">
+                        <div class="related-content">
+                            <h4>
+                                <span class="material-symbols-outlined" style="font-size: 1rem;">restaurant</span> 
+                                Dieta BARF: ¿Moda o Realidad?
+                            </h4>
+                            <p>6 min lectura</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- ========================================
+         FOOTER: Pie de página
+         ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Sección de información de la empresa -->
+            <div class="footer-section">
+                <h3>EcoPets CR</h3>
+                <p>Productos ecológicos y sostenibles para el cuidado de tus mascotas.</p>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">eco</span>
+                    Cuida a tu mascota, cuida el planeta
+                </p>
+            </div>
+
+            <!-- Sección de enlaces rápidos -->
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="nosotros.html">Nosotros</a></p>
+                <p><a href="blog.html">Blog</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+
+            <!-- Sección de información de contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">mail</span>
+                    info@ecopetscr.com
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">phone</span>
+                    +506 8888-9999
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">location_on</span>
+                    San José, Costa Rica
+                </p>
+            </div>
+
+            <!-- Sección de redes sociales -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://X.com/" aria-label="X (Twitter)" class="social-icon twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoPets CR | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         BOTÓN FLOTANTE: Menú índice móvil
+         ======================================== -->
+    <!-- Botón flotante para mostrar el índice en dispositivos móviles -->
+    <button id="floatingTocBtn" class="toggle-toc" aria-label="Mostrar índice">
+        <span class="material-symbols-outlined">list</span>
+    </button>
+
+    <!-- Overlay oscuro para el menú móvil (fondo semitransparente) -->
+    <div id="mobileTocOverlay" class="mobile-toc-overlay"></div>
+
+    <!-- Menú lateral móvil con índice de contenido -->
+    <aside id="mobileTocMenu" class="mobile-toc-menu">
+        <div class="mobile-toc-content">
+            <!-- Botón para cerrar el menú lateral -->
+            <button id="mobileTocClose" class="close-toc" aria-label="Cerrar índice">×</button>
+            
+            <h3>Índice de contenido</h3>
+            
+            <!-- Enlaces del índice que redirigen a secciones del artículo -->
+            <ul class="table-of-contents">
+                <li><a href="#introduccion" class="mobile-toc-link">Introducción</a></li>
+                <li><a href="#causas" class="mobile-toc-link">¿Por qué se estresan las mascotas?</a></li>
+                <li><a href="#consejos" class="mobile-toc-link">Consejos para reducir el estrés</a></li>
+                <li><a href="#tecnicas-adicionales" class="mobile-toc-link">Técnicas adicionales</a></li>
+                <li><a href="#conclusion" class="mobile-toc-link">Conclusión</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Archivo JavaScript externo para funcionalidad interactiva -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

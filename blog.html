@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos para el documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Descripción para motores de búsqueda -->
+    <meta name="description"
+        content="Blog de EcoPets CR - Consejos, tutoriales y opiniones sobre el cuidado natural de mascotas.">
+
+    <!-- SEO: Palabras clave relevantes -->
+    <meta name="keywords"
+        content="blog mascotas, cuidado natural, veterinaria holística, alimentación natural, EcoPets">
+
+    <!-- Autor del contenido -->
+    <meta name="author" content="EcoPets CR">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Blog - EcoPets CR</title>
+
+    <!-- Enlaces a archivos CSS externos y libreria externa -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Material Icons: biblioteca de iconos de Google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- ========================================
+         HEADER: Encabezado principal del sitio
+         ======================================== -->
+    <header>
+        <div class="header-container">
+            <!-- Logo de la empresa -->
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="imagenes/logo.png" alt="Logo EcoPets CR">
+                </div>
+                <h1>EcoPets CR</h1>
+            </div>
+
+            <!-- Navegación principal del sitio -->
+            <nav id="mainNav" role="navigation">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="acerca-de.html">Acerca de</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa para menú móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION: Sección destacada del blog
+         ======================================== -->
+    <section class="blog-hero">
+        <!-- Overlay oscuro sobre la imagen de fondo para mejor legibilidad -->
+        <div class="hero-overlay"></div>
+
+        <!-- Contenido principal del hero -->
+        <div class="hero-content">
+            <h1>
+                <span class="material-symbols-outlined" style="font-size: 3rem; vertical-align: middle;">spa</span>
+                Blog EcoPets CR
+            </h1>
+            <p>Descubre consejos, tutoriales y las últimas tendencias en el cuidado natural de mascotas</p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         MAIN: Contenedor principal de contenido
+         ======================================== -->
+    <main class="container">
+        <!-- ========================================
+             SECCIÓN: Introducción del blog
+             ======================================== -->
+        <section class="blog-intro">
+            <h2>Bienvenido a Nuestra Revista Digital</h2>
+            <p>
+                En nuestro blog compartimos conocimientos sobre el cuidado holístico de mascotas, alimentación natural,
+                terapias alternativas y mucho más. Queremos ayudarte a brindarle a tu compañero peludo la mejor calidad
+                de vida posible, de manera natural y sostenible.
+            </p>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: Categorías del blog
+             ======================================== -->
+        <section class="categories-section">
+            <h2 class="section-title">
+                <span class="material-symbols-outlined">folder</span> Explora por Categorías
+            </h2>
+
+            <!-- Grid de tarjetas de categorías -->
+            <div class="categories-grid">
+                <!-- Categoría: Tutoriales -->
+                <div class="category-card" data-category="tutoriales">
+                    <div class="category-icon">
+                        <img src="imagenes/libro-magico.png" alt="Tutoriales">
+                    </div>
+                    <h3>Tutoriales</h3>
+                    <p>Guías paso a paso para el cuidado de tu mascota</p>
+                    <span class="article-count">3 artículos</span>
+                </div>
+
+                <!-- Categoría: Consejos y Trucos -->
+                <div class="category-card" data-category="consejos">
+                    <div class="category-icon">
+                        <img src="imagenes/bombilla.png" alt="Consejos">
+                    </div>
+                    <h3>Consejos y Trucos</h3>
+                    <p>Tips prácticos para el día a día con tu mascota</p>
+                    <span class="article-count">2 artículos</span>
+                </div>
+
+                <!-- Categoría: Opiniones -->
+                <div class="category-card" data-category="opiniones">
+                    <div class="category-icon">
+                        <img src="imagenes/conversacion.png" alt="Opiniones">
+                    </div>
+                    <h3>Opiniones</h3>
+                    <p>Reflexiones sobre el cuidado natural y sostenible</p>
+                    <span class="article-count">2 artículos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: Carrusel de artículos destacados
+             ======================================== -->
+        <section class="featured-articles">
+            <h2 class="section-title">
+                <span class="material-symbols-outlined">star</span> Artículos Destacados
+            </h2>
+
+            <!-- Contenedor del carrusel con botones de navegación -->
+            <div class="carousel-container">
+                <!-- Botón anterior -->
+                <button class="carousel-btn prev" id="prevBtn" aria-label="Artículo anterior">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+
+                <!-- Wrapper del carrusel -->
+                <div class="carousel-wrapper">
+                    <!-- Track que contiene todas las tarjetas del carrusel -->
+                    <div class="carousel-track" id="carouselTrack">
+
+                        <!-- Artículo destacado #1: Vacunación -->
+                        <article class="article-card-carousel" data-category="tutoriales">
+                            <div class="article-image">
+                                <img src="imagenes/vacunacion-mascota.jpg" alt="Perro siendo vacunado">
+                                <span class="category-badge-overlay">Tutoriales</span>
+                            </div>
+                            <div class="article-card-content">
+                                <h3>Vacunación en Mascotas: Clave para una Vida Saludable</h3>
+                                <p>
+                                    Conoce el calendario de vacunación esencial para mantener a tu mascota protegida
+                                    contra enfermedades. Incluye información sobre vacunas obligatorias y opcionales.
+                                </p>
+                                <div class="article-meta-card">
+                                    <span>
+                                        <span class="material-symbols-outlined">calendar_today</span> 10 Oct 2025
+                                    </span>
+                                    <span>
+                                        <span class="material-symbols-outlined">schedule</span> 6 min
+                                    </span>
+                                </div>
+                                <a href="vacunacion.html" class="btn btn-primary">
+                                    Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo destacado #2: Reducir estrés -->
+                        <article class="article-card-carousel" data-category="consejos">
+                            <div class="article-image">
+                                <img src="imagenes/mascota-estresada.jpg" alt="Mascota estresada">
+                                <span class="category-badge-overlay">Consejos</span>
+                            </div>
+                            <div class="article-card-content">
+                                <h3>Cómo Reducir el Estrés en tu Mascota</h3>
+                                <p>
+                                    El estrés puede afectar gravemente la salud de tu mascota. Descubre técnicas
+                                    naturales y efectivas para crear un ambiente tranquilo y reducir la ansiedad.
+                                </p>
+                                <div class="article-meta-card">
+                                    <span>
+                                        <span class="material-symbols-outlined">calendar_today</span> 8 Oct 2025
+                                    </span>
+                                    <span>
+                                        <span class="material-symbols-outlined">schedule</span> 5 min
+                                    </span>
+                                </div>
+                                <a href="reducir-estres-mascota.html" class="btn btn-primary">
+                                    Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo destacado #3: Medicina holística -->
+                        <article class="article-card-carousel" data-category="opiniones">
+                            <div class="article-image">
+                                <img src="imagenes/perro-holistica.webp" alt="Tratamiento holístico en mascota">
+                                <span class="category-badge-overlay">Opiniones</span>
+                            </div>
+                            <div class="article-card-content">
+                                <h3>Beneficios de la Medicina Holística para Mascotas</h3>
+                                <p>
+                                    La medicina holística ofrece alternativas naturales y efectivas. Conoce cómo
+                                    la acupuntura, fitoterapia y otros tratamientos pueden mejorar la vida de tu
+                                    mascota.
+                                </p>
+                                <div class="article-meta-card">
+                                    <span>
+                                        <span class="material-symbols-outlined">calendar_today</span> 5 Oct 2025
+                                    </span>
+                                    <span>
+                                        <span class="material-symbols-outlined">schedule</span> 5 min
+                                    </span>
+                                </div>
+                                <a href="holistica.html" class="btn btn-primary">
+                                    Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo destacado #4: Ejercicio -->
+                        <article class="article-card-carousel" data-category="tutoriales">
+                            <div class="article-image">
+                                <img src="imagenes/perro-ejercicio.jpg" alt="Perro haciendo ejercicio">
+                                <span class="category-badge-overlay">Tutoriales</span>
+                            </div>
+                            <div class="article-card-content">
+                                <h3>Rutinas de Ejercicio según la Raza de tu Perro</h3>
+                                <p>
+                                    Cada raza tiene necesidades específicas de ejercicio. Aprende a crear una rutina
+                                    adecuada para mantener a tu perro saludable, activo y feliz.
+                                </p>
+                                <div class="article-meta-card">
+                                    <span>
+                                        <span class="material-symbols-outlined">calendar_today</span> 3 Oct 2025
+                                    </span>
+                                    <span>
+                                        <span class="material-symbols-outlined">schedule</span> 7 min
+                                    </span>
+                                </div>
+                                <a href="ejercicio.html" class="btn btn-primary">
+                                    Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo destacado #5: Dieta BARF -->
+                        <article class="article-card-carousel" data-category="consejos">
+                            <div class="article-image">
+                                <img src="imagenes/dieta-barf.webp" alt="Alimentos naturales para mascotas">
+                                <span class="category-badge-overlay">Consejos</span>
+                            </div>
+                            <div class="article-card-content">
+                                <h3>Dieta BARF: ¿Es Adecuada para tu Mascota?</h3>
+                                <p>
+                                    La dieta BARF (alimentos crudos biológicamente apropiados) está ganando popularidad.
+                                    Conoce sus beneficios, riesgos y cómo implementarla correctamente.
+                                </p>
+                                <div class="article-meta-card">
+                                    <span>
+                                        <span class="material-symbols-outlined">calendar_today</span> 1 Oct 2025
+                                    </span>
+                                    <span>
+                                        <span class="material-symbols-outlined">schedule</span> 8 min
+                                    </span>
+                                </div>
+                                <a href="dieta-barf.html" class="btn btn-primary">
+                                    Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo destacado #6: Baños naturales -->
+                        <article class="article-card-carousel" data-category="tutoriales">
+                            <div class="article-image">
+                                <img src="imagenes/bano-natural.jpg" alt="Baño natural para mascotas">
+                                <span class="category-badge-overlay">Tutoriales</span>
+                            </div>
+                            <div class="article-card-content">
+                                <h3>Baños Naturales: Recetas Caseras Ecológicas</h3>
+                                <p>
+                                    Aprende a preparar champús y acondicionadores naturales para tu mascota.
+                                    Ingredientes simples, efectivos y amigables con el medio ambiente.
+                                </p>
+                                <div class="article-meta-card">
+                                    <span>
+                                        <span class="material-symbols-outlined">calendar_today</span> 28 Sep 2025
+                                    </span>
+                                    <span>
+                                        <span class="material-symbols-outlined">schedule</span> 4 min
+                                    </span>
+                                </div>
+                                <a href="bannos-naturales.html" class="btn btn-primary">
+                                    Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo destacado #7: Alimentación natural -->
+                        <article class="article-card-carousel" data-category="opiniones">
+                            <div class="article-image">
+                                <img src="imagenes/alimentacion-natural.png" alt="Alimentación natural para mascotas">
+                                <span class="category-badge-overlay">Opiniones</span>
+                            </div>
+                            <div class="article-card-content">
+                                <h3>Alimentación Natural</h3>
+                                <p>
+                                    Un análisis profundo sobre las diferencias entre la alimentación natural y los
+                                    concentrados comerciales. ¿Cuál es mejor para la salud de tu mascota?
+                                </p>
+                                <div class="article-meta-card">
+                                    <span>
+                                        <span class="material-symbols-outlined">calendar_today</span> 25 Sep 2025
+                                    </span>
+                                    <span>
+                                        <span class="material-symbols-outlined">schedule</span> 6 min
+                                    </span>
+                                </div>
+                                <a href="alimentacion-natural.html" class="btn btn-primary">
+                                    Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Botón siguiente -->
+                <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente artículo">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+
+            <!-- Indicadores del carrusel (puntos de navegación) -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+                <span class="indicator" data-index="4"></span>
+                <span class="indicator" data-index="5"></span>
+                <span class="indicator" data-index="6"></span>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: Todos los artículos con filtros
+             ======================================== -->
+        <section class="all-articles-section">
+            <h2 class="section-title">
+                <span class="material-symbols-outlined">description</span> 📚 Todos los Artículos
+            </h2>
+
+            <!-- BARRA DE BÚSQUEDA NUEVA -->
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" id="searchInput" placeholder="Buscar artículos por título o contenido..."
+                        aria-label="Buscar artículos">
+                    <button id="clearSearch" class="clear-btn" style="display: none;">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+
+                <!-- Botones de filtro por categoría -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="todos">🌟 Todos</button>
+                    <button class="filter-btn" data-filter="tutoriales">📖 Tutoriales</button>
+                    <button class="filter-btn" data-filter="consejos">💡 Consejos</button>
+                    <button class="filter-btn" data-filter="opiniones">💬 Opiniones</button>
+                </div>
+            </div>
+
+            <!-- Mensaje cuando no hay resultados -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <span class="material-symbols-outlined">search_off</span>
+                <p>No se encontraron artículos que coincidan con tu búsqueda 😔</p>
+                <p class="small-text">Intenta con otras palabras clave o explora todas las categorías</p>
+            </div>
+
+            <!-- Grid de artículos -->
+            <div class="articles-grid" id="articlesGrid">
+
+                <!-- Artículo #1: Vacunación -->
+                <article class="article-card" data-category="tutoriales"
+                    data-title="guía completa de vacunación para mascotas"
+                    data-description="conoce el calendario de vacunación esencial para mantener a tu mascota protegida contra enfermedades comunes y peligrosas">
+                    <div class="article-thumbnail">
+                        <img src="imagenes/vacunacion-mascota.jpg" alt="Calendario de vacunación">
+                        <span class="category-tag">📖 Tutoriales</span>
+                    </div>
+                    <div class="article-info">
+                        <h3>💉 Vacunación en Mascotas: Clave para una Vida Saludable</h3>
+                        <p>
+                            Conoce el calendario de vacunación esencial para mantener a tu mascota protegida
+                            contra enfermedades comunes y peligrosas.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-date">
+                                <span class="material-symbols-outlined">calendar_today</span> 10 Oct 2025
+                            </span>
+                            <a href="vacunacion.html" class="read-more">
+                                Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo #2: Reducir estrés -->
+                <article class="article-card" data-category="consejos" data-title="cómo reducir el estrés en tu mascota"
+                    data-description="técnicas naturales y efectivas para crear un ambiente tranquilo y reducir la ansiedad en perros y gatos">
+                    <div class="article-thumbnail">
+                        <img src="imagenes/mascota-estresada.jpg" alt="Reducir estrés mascota">
+                        <span class="category-tag">💡 Consejos</span>
+                    </div>
+                    <div class="article-info">
+                        <h3>😰 Cómo Reducir el Estrés en tu Mascota</h3>
+                        <p>
+                            Técnicas naturales y efectivas para crear un ambiente tranquilo y reducir la
+                            ansiedad en perros y gatos.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-date">
+                                <span class="material-symbols-outlined">calendar_today</span> 8 Oct 2025
+                            </span>
+                            <a href="reducir-estres-mascota.html" class="read-more">
+                                Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo #3: Medicina holística -->
+                <article class="article-card" data-category="opiniones"
+                    data-title="beneficios de la medicina holística para mascotas"
+                    data-description="la medicina holística ofrece alternativas naturales como acupuntura y fitoterapia para mejorar la salud de tu mascota">
+                    <div class="article-thumbnail">
+                        <img src="imagenes/perro-holistica.webp" alt="Medicina holística">
+                        <span class="category-tag">💬 Opiniones</span>
+                    </div>
+                    <div class="article-info">
+                        <h3>🌿 Beneficios de la Medicina Holística para Mascotas</h3>
+                        <p>
+                            La medicina holística ofrece alternativas naturales como acupuntura y fitoterapia
+                            para mejorar la salud de tu mascota.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-date">
+                                <span class="material-symbols-outlined">calendar_today</span> 5 Oct 2025
+                            </span>
+                            <a href="holistica.html" class="read-more">
+                                Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo #4: Ejercicio -->
+                <article class="article-card" data-category="tutoriales"
+                    data-title="rutinas de ejercicio según la raza de tu perro"
+                    data-description="cada raza tiene necesidades específicas aprende a crear rutinas de ejercicio adecuadas para tu perro">
+                    <div class="article-thumbnail">
+                        <img src="imagenes/perro-ejercicio.jpg" alt="Ejercicio para perros">
+                        <span class="category-tag">📖 Tutoriales</span>
+                    </div>
+                    <div class="article-info">
+                        <h3>🏃 Rutinas de Ejercicio según la Raza de tu Perro</h3>
+                        <p>
+                            Cada raza tiene necesidades específicas. Aprende a crear rutinas de ejercicio
+                            adecuadas para tu perro.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-date">
+                                <span class="material-symbols-outlined">calendar_today</span> 3 Oct 2025
+                            </span>
+                            <a href="ejercicio.html" class="read-more">
+                                Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo #5: Dieta BARF -->
+                <article class="article-card" data-category="consejos"
+                    data-title="dieta barf es adecuada para tu mascota"
+                    data-description="conoce los beneficios y riesgos de la dieta barf y cómo implementarla correctamente en la alimentación de tu mascota">
+                    <div class="article-thumbnail">
+                        <img src="imagenes/dieta-barf.webp" alt="Dieta BARF">
+                        <span class="category-tag">💡 Consejos</span>
+                    </div>
+                    <div class="article-info">
+                        <h3>🥩 Dieta BARF: ¿Es Adecuada para tu Mascota?</h3>
+                        <p>
+                            Conoce los beneficios y riesgos de la dieta BARF y cómo implementarla
+                            correctamente en la alimentación de tu mascota.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-date">
+                                <span class="material-symbols-outlined">calendar_today</span> 1 Oct 2025
+                            </span>
+                            <a href="dieta-barf.html" class="read-more">
+                                Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo #6: Baños naturales -->
+                <article class="article-card" data-category="tutoriales"
+                    data-title="baños naturales recetas caseras ecológicas"
+                    data-description="prepara champús y acondicionadores naturales para tu mascota con ingredientes simples y ecológicos">
+                    <div class="article-thumbnail">
+                        <img src="imagenes/bano-natural.jpg" alt="Baños naturales">
+                        <span class="category-tag">📖 Tutoriales</span>
+                    </div>
+                    <div class="article-info">
+                        <h3>🛁 Baños Naturales: Recetas Caseras Ecológicas</h3>
+                        <p>
+                            Prepara champús y acondicionadores naturales para tu mascota con ingredientes
+                            simples y ecológicos.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-date">
+                                <span class="material-symbols-outlined">calendar_today</span> 28 Sep 2025
+                            </span>
+                            <a href="bannos-naturales.html" class="read-more">
+                                Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo #7: Alimentación natural -->
+                <article class="article-card" data-category="opiniones" data-title="alimentación natural"
+                    data-description="un análisis profundo sobre las diferencias entre alimentación natural y concentrados comerciales para mascotas">
+                    <div class="article-thumbnail">
+                        <img src="imagenes/alimentacion-natural.png" alt="Alimentación natural">
+                        <span class="category-tag">💬 Opiniones</span>
+                    </div>
+                    <div class="article-info">
+                        <h3>🥗 Alimentación Natural</h3>
+                        <p>
+                            Un análisis profundo sobre las diferencias entre alimentación natural y
+                            concentrados comerciales para mascotas.
+                        </p>
+                        <div class="article-footer">
+                            <span class="article-date">
+                                <span class="material-symbols-outlined">calendar_today</span> 25 Sep 2025
+                            </span>
+                            <a href="alimentacion-natural.html" class="read-more">
+                                Leer más <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: Newsletter (suscripción)
+             ======================================== -->
+        <section class="newsletter-section">
+            <div class="newsletter-card">
+                <h2>
+                    <span class="material-symbols-outlined">mail</span> Suscríbete a Nuestro Newsletter
+                </h2>
+                <p>Recibe consejos exclusivos y las últimas novedades sobre el cuidado natural de mascotas</p>
+
+                <!-- Formulario de suscripción -->
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="tu@email.com" required aria-label="Correo electrónico">
+                    <button type="submit" class="btn btn-secondary">Suscribirse</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================
+         FOOTER: Pie de página
+         ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Sección de información de la empresa -->
+            <div class="footer-section">
+                <h3>EcoPets CR</h3>
+                <p>Productos ecológicos y sostenibles para el cuidado de tus mascotas.</p>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">eco</span>
+                    Cuida a tu mascota, cuida el planeta
+                </p>
+            </div>
+
+            <!-- Sección de enlaces rápidos -->
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="nosotros.html">Nosotros</a></p>
+                <p><a href="blog.html">Blog</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+
+            <!-- Sección de información de contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">mail</span>
+                    info@ecopetscr.com
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">phone</span>
+                    +506 8888-9999
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">location_on</span>
+                    San José, Costa Rica
+                </p>
+            </div>
+
+            <!-- Sección de redes sociales -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://X.com/" aria-label="X (Twitter)" class="social-icon twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoPets CR | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Archivos JavaScript externos para funcionalidad interactiva -->
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>

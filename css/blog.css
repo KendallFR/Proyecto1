@@ -1,0 +1,980 @@
+/* ===================================
+   HERO SECTION - Sección principal de bienvenida
+   =================================== */
+.blog-hero {
+    background: url('../imagenes/blog-hero.webp') center/cover;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--negro);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Capa decorativa con degradado para mejorar contraste */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(245,245,245,0.5));
+    pointer-events: none;
+}
+
+/* Contenedor del texto principal del hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Título principal del blog con animación de entrada */
+.blog-hero h1 {
+    font-size: 3.5rem;
+    color: var(--verde-bosque);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    animation: fadeInDown 0.8s ease;
+    font-weight: 800;
+}
+
+/* Subtítulo descriptivo con animación retrasada */
+.blog-hero p {
+    font-size: 1.3rem;
+    color: var(--negro);
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease 0.2s both;
+    font-weight: 500;
+}
+
+/* ===================================
+   INTRO - Texto de introducción del blog
+   =================================== */
+.blog-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 4rem auto 3rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, rgba(67, 160, 71, 0.03), transparent);
+    border-radius: 15px;
+}
+
+.blog-intro h2 {
+    color: var(--verde-bosque);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.blog-intro p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--negro);
+}
+
+/* ===================================
+   CATEGORIES - Tarjetas de categorías del blog
+   =================================== */
+.categories-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(249, 168, 37, 0.05), rgba(67, 160, 71, 0.05));
+    border-radius: 20px;
+}
+
+/* Grid responsivo que se adapta al tamaño de pantalla */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Tarjeta individual de categoría con efectos interactivos */
+.category-card {
+    background: linear-gradient(135deg, var(--blanco) 0%, var(--gris-claro) 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Efecto de brillo que atraviesa la tarjeta al hacer hover */
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(67, 160, 71, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.category-card:hover::before {
+    left: 100%;
+}
+
+/* Efectos de elevación y resaltado al pasar el mouse */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(46, 125, 50, 0.25);
+    border-color: var(--verde-claro);
+}
+
+/* Contenedor del icono/imagen de la categoría */
+.category-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+/* Imagen dentro del contenedor de icono */
+.category-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 15px rgba(46, 125, 50, 0.2));
+    transition: all 0.4s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Efecto de zoom y elevación en la imagen al hacer hover */
+.category-card:hover .category-icon img {
+    transform: scale(1.1) translateY(-5px);
+    filter: drop-shadow(0 12px 25px rgba(46, 125, 50, 0.35));
+}
+
+.category-card h3 {
+    color: var(--verde-bosque);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.category-card p {
+    color: var(--negro);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Etiqueta con el contador de artículos por categoría */
+.article-count {
+    display: inline-block;
+    background: var(--naranja-suave);
+    color: var(--blanco);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(249, 168, 37, 0.3);
+}
+
+/* ===================================
+   FEATURED CAROUSEL - Carrusel de artículos destacados
+   =================================== */
+.featured-articles {
+    margin: 5rem 0;
+    background: linear-gradient(to bottom, transparent, rgba(67, 160, 71, 0.03), transparent);
+    padding: 3rem 0;
+}
+
+/* Contenedor principal del carrusel con espacio para botones */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 3rem auto;
+    padding: 0 60px;
+}
+
+/* Wrapper que oculta el desbordamiento del carrusel */
+.carousel-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Pista donde se desplazan las tarjetas horizontalmente */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Tarjeta de artículo dentro del carrusel con diseño de dos columnas */
+.article-card-carousel {
+    min-width: 100%;
+    background: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 0;
+}
+
+/* Contenedor de la imagen del artículo con fondo de respaldo */
+.article-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 400px;
+    background: linear-gradient(135deg, var(--verde-bosque), var(--verde-claro));
+}
+
+/* Imagen del artículo con efecto zoom suave al hacer hover */
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.article-card-carousel:hover .article-image img {
+    transform: scale(1.1);
+}
+
+/* Etiqueta de categoría superpuesta sobre la imagen */
+.category-badge-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--naranja-suave);
+    color: var(--negro);
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido textual del artículo con degradado sutil de fondo */
+.article-card-content {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--blanco), rgba(67, 160, 71, 0.02));
+}
+
+.article-card-content h3 {
+    color: var(--verde-bosque);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+/* Párrafo con flex-grow para mantener botones alineados al fondo */
+.article-card-content p {
+    color: var(--negro);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+/* Metadatos del artículo (fecha y tiempo de lectura) */
+.article-meta-card {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Botones de navegación del carrusel (anterior/siguiente) */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--verde-bosque);
+    color: var(--blanco);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.carousel-btn:hover {
+    background: var(--verde-claro);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+/* Indicadores de posición del carrusel (puntos en la parte inferior) */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Punto indicador individual */
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gris-claro);
+    border: 2px solid var(--verde-claro);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:hover {
+    background: var(--verde-claro);
+    transform: scale(1.2);
+}
+
+/* Indicador activo (artículo actualmente visible) */
+.indicator.active {
+    background: var(--verde-bosque);
+    width: 35px;
+    border-radius: 10px;
+}
+
+/* ===================================
+   SEARCH & FILTER - Barra de búsqueda y filtros
+   =================================== */
+.search-filter-container {
+    margin: 2rem 0 3rem;
+}
+
+/* Contenedor de la barra de búsqueda con icono y botón */
+.search-box {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    background: var(--blanco);
+    border-radius: 50px;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque cuando el usuario está escribiendo */
+.search-box:focus-within {
+    border-color: var(--verde-claro);
+    box-shadow: 0 8px 30px rgba(67, 160, 71, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Icono de búsqueda (lupa) */
+.search-box .material-symbols-outlined {
+    color: var(--verde-bosque);
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+/* Campo de entrada de texto para búsqueda */
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--negro);
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+/* Botón para limpiar la búsqueda (aparece solo con texto) */
+.clear-btn {
+    background: var(--gris-claro);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.clear-btn:hover {
+    background: var(--naranja-suave);
+    transform: rotate(90deg);
+}
+
+.clear-btn .material-symbols-outlined {
+    font-size: 1.2rem;
+    color: var(--negro);
+    margin: 0;
+}
+
+/* Mensaje que aparece cuando no hay resultados de búsqueda */
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(249, 168, 37, 0.05), rgba(67, 160, 71, 0.05));
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.no-results .material-symbols-outlined {
+    font-size: 5rem;
+    color: var(--verde-claro);
+    display: block;
+    margin: 0 auto 1rem;
+    opacity: 0.5;
+}
+
+.no-results p {
+    font-size: 1.2rem;
+    color: var(--negro);
+    margin-bottom: 0.5rem;
+}
+
+.no-results .small-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* ===================================
+   FILTER SECTION - Sección de filtros por categoría
+   =================================== */
+.all-articles-section {
+    margin: 5rem 0;
+    padding: 2rem;
+    background: var(--blanco);
+    border-radius: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor de botones de filtro con distribución flexible */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0 3rem;
+}
+
+/* Botón de filtro individual con borde y hover */
+.filter-btn {
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--verde-bosque);
+    background: transparent;
+    color: var(--verde-bosque);
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn:hover {
+    background: var(--verde-claro);
+    border-color: var(--verde-claro);
+    color: var(--blanco);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(67, 160, 71, 0.3);
+}
+
+/* Botón de filtro cuando está activo/seleccionado */
+.filter-btn.active {
+    background: var(--verde-bosque);
+    color: var(--blanco);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+}
+
+/* ===================================
+   ARTICLES GRID - Cuadrícula de todos los artículos
+   =================================== */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+/* Tarjeta de artículo individual con diseño vertical */
+.article-card {
+    background: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(67, 160, 71, 0.1);
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--verde-claro);
+}
+
+/* Miniatura de la imagen del artículo con altura fija */
+.article-thumbnail {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    background: linear-gradient(135deg, var(--verde-claro), var(--verde-bosque));
+}
+
+.article-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.article-card:hover .article-thumbnail img {
+    transform: scale(1.15);
+}
+
+/* Etiqueta de categoría posicionada sobre la imagen */
+.category-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--naranja-suave);
+    color: var(--negro);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Información textual del artículo con crecimiento flexible */
+.article-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: linear-gradient(to bottom, var(--blanco), rgba(67, 160, 71, 0.02));
+}
+
+.article-info h3 {
+    color: var(--verde-bosque);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Párrafo que crece para mantener el footer al fondo */
+.article-info p {
+    color: var(--negro);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Pie del artículo con fecha y enlace "Leer más" */
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 2px solid var(--gris-claro);
+}
+
+.article-date {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Enlace "Leer más" con efecto de expansión de flecha */
+.read-more {
+    color: var(--verde-claro);
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.read-more:hover {
+    color: var(--verde-bosque);
+    gap: 0.8rem;
+}
+
+/* ===================================
+   NEWSLETTER - Sección de suscripción
+   =================================== */
+.newsletter-section {
+    margin: 6rem 0 4rem;
+}
+
+/* Tarjeta de newsletter con degradado y efectos de profundidad */
+.newsletter-card {
+    background: linear-gradient(135deg, var(--verde-bosque) 0%, var(--verde-claro) 100%);
+    padding: 4rem 3rem;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--blanco);
+    box-shadow: 0 10px 40px rgba(46, 125, 50, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto decorativo animado de fondo */
+.newsletter-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(249, 168, 37, 0.1), transparent);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.newsletter-card h2 {
+    color: var(--amarillo-claro);
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter-card p {
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+/* Formulario de suscripción con campos flexibles */
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-form button {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===================================
+   ANIMATIONS - Animaciones personalizadas
+   =================================== */
+
+/* Animación de entrada desde arriba (títulos) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de entrada desde abajo (subtítulos) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de flotación suave para imágenes de categorías */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animación de pulso para efectos de fondo del newsletter */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+/* ===================================
+   UTILITY - Clase para ocultar elementos
+   =================================== */
+.article-card.hidden {
+    display: none;
+}
+
+/* ===================================
+   RESPONSIVE - Adaptación para tablets (1024px o menos)
+   =================================== */
+@media (max-width: 1024px) {
+    /* Cambiar diseño del carrusel a una sola columna */
+    .article-card-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .article-image {
+        min-height: 300px;
+    }
+
+    .article-card-content {
+        padding: 2rem;
+    }
+
+    .article-card-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .carousel-container {
+        padding: 0 50px;
+    }
+
+    /* Reducir ancho mínimo de las tarjetas de artículos */
+    .articles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+}
+
+/* ===================================
+   RESPONSIVE - Adaptación para móviles grandes (768px o menos)
+   =================================== */
+@media (max-width: 768px) {
+    /* Ajustar tamaños de texto en el hero */
+    .blog-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .blog-hero p {
+        font-size: 1.1rem;
+    }
+
+    .blog-hero {
+        min-height: 350px;
+    }
+
+    .categories-section {
+        padding: 1.5rem;
+    }
+
+    /* Cambiar categorías a una sola columna */
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .carousel-container {
+        padding: 0 40px;
+    }
+
+    /* Reducir tamaño de botones del carrusel */
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .article-card-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .article-image {
+        min-height: 250px;
+    }
+
+    .article-card-content {
+        padding: 1.5rem;
+    }
+
+    .article-card-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .article-card-content p {
+        font-size: 1rem;
+    }
+
+    .article-meta-card {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    /* Cambiar artículos a una sola columna */
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .filter-buttons {
+        gap: 0.8rem;
+    }
+
+    .filter-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .newsletter-card {
+        padding: 3rem 2rem;
+    }
+
+    .newsletter-card h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Cambiar formulario de newsletter a columna */
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    /* Ajustes para la barra de búsqueda */
+    .search-box {
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .search-box input {
+        font-size: 0.95rem;
+    }
+    
+    .search-filter-container {
+        margin: 1.5rem 0 2rem;
+    }
+}
+
+/* ===================================
+   RESPONSIVE - Adaptación para móviles pequeños (480px o menos)
+   =================================== */
+@media (max-width: 480px) {
+    /* Reducir aún más el tamaño del texto del hero */
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+
+    .blog-hero p {
+        font-size: 1rem;
+    }
+
+    .blog-hero {
+        min-height: 300px;
+    }
+
+    .carousel-container {
+        padding: 0 35px;
+    }
+
+    /* Botones del carrusel más pequeños */
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+    }
+
+    .article-card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .category-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Reducir tamaño de imágenes de categorías en móviles */
+    .category-icon {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .newsletter-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .blog-intro {
+        margin: 3rem auto 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .all-articles-section {
+        padding: 1.5rem;
+    }
+}
+

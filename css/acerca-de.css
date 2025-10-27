@@ -1,0 +1,243 @@
+.about-hero {
+    background: linear-gradient(135deg, var(--verde-bosque), var(--verde-claro));
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.about-hero h1 {
+    color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.developers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.developer-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+    text-align: center;
+}
+
+.developer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(46, 125, 50, 0.2);
+    border-color: var(--verde-claro);
+}
+
+.developer-photo-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    border: 5px solid var(--verde-claro);
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.developer-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.developer-name {
+    color: var(--verde-bosque);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.developer-info {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.developer-info .info-item {
+    padding: 0.8rem 0;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.developer-info .info-item:last-child {
+    border-bottom: none;
+}
+
+.developer-info strong {
+    color: var(--verde-bosque);
+    display: inline-block;
+    min-width: 80px;
+}
+
+.developer-info a {
+    color: var(--verde-claro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.developer-info a:hover {
+    color: var(--naranja-suave);
+    text-decoration: underline;
+}
+
+.additional-info {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--gris-claro);
+    text-align: left;
+}
+
+.additional-info h4 {
+    color: var(--verde-bosque);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.additional-info h4::before {
+    content: '📚';
+    font-size: 1.5rem;
+}
+
+.additional-info p {
+    color: var(--negro);
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gris-claro);
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+}
+
+.social-links-dev {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.social-links-dev a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--verde-claro);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.social-links-dev a:hover {
+    background: var(--verde-bosque);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+.social-links-dev a i {
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .developers-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 2rem auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 3rem 0;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+
+    .about-container {
+        padding: 3rem 1rem;
+    }
+
+    .developers-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .developer-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .developer-photo-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .developer-name {
+        font-size: 1.5rem;
+    }
+
+    .social-links-dev {
+        flex-direction: column;
+    }
+
+    .social-links-dev a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .developer-photo-container {
+        width: 130px;
+        height: 130px;
+    }
+
+    .developer-name {
+        font-size: 1.3rem;
+    }
+
+    .developer-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .additional-info p {
+        font-size: 0.9rem;
+    }
+}

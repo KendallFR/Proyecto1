@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos para el documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Descripción para motores de búsqueda -->
+    <meta name="description"
+        content="Aprende a bañar a tu mascota con productos naturales. Recetas caseras, ingredientes seguros y técnicas profesionales en EcoPets CR.">
+
+    <!-- SEO: Palabras clave relevantes -->
+    <meta name="keywords"
+        content="baño natural mascotas, shampoo casero perros, productos ecológicos, cuidado natural, EcoPets">
+
+    <!-- Autor del contenido -->
+    <meta name="author" content="María Fernández">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Baños Naturales para Mascotas: Guía Completa - EcoPets CR</title>
+
+    <!-- Enlace al archivo CSS externo y libreria externa-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/articulo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Material Icons: biblioteca de iconos de Google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- ========================================
+         HEADER: Encabezado principal del sitio
+         ======================================== -->
+    <header>
+        <div class="header-container">
+            <!-- Logo de la empresa -->
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="imagenes/logo.png" alt="Logo EcoPets CR">
+                </div>
+                <h1>EcoPets CR</h1>
+            </div>
+
+            <!-- Navegación principal del sitio -->
+            <nav id="mainNav" role="navigation">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="acerca-de.html">Acerca de</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa para menú móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION: Sección destacada del artículo
+         ======================================== -->
+    <section class="article-hero" style="background-image: url('imagenes/bano-natural.jpg');">
+        <div class="article-hero-content">
+            <!-- Botón para volver al blog (ahora dentro del contenido del hero) -->
+            <a href="blog.html" class="btn-back">
+                <span class="material-symbols-outlined">arrow_back</span> Regresar al Blog
+            </a>
+
+            <!-- Etiqueta de categoría -->
+            <span class="category-badge">Cuidado Natural</span>
+
+            <!-- Título principal del artículo (H1: debe ser único en la página) -->
+            <h1>Baños Naturales para Mascotas: Guía Completa</h1>
+
+            <!-- Metadatos del artículo -->
+            <div class="article-meta">
+                <span>
+                    <span class="material-symbols-outlined">person</span> Por: María Fernández
+                </span>
+                <span>
+                    <span class="material-symbols-outlined">calendar_today</span> 15 de Octubre, 2025
+                </span>
+                <span>
+                    <span class="material-symbols-outlined">comment</span> 5 Comentarios
+                </span>
+                <span>
+                    <span class="material-symbols-outlined">schedule</span> 8 min lectura
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTENEDOR PRINCIPAL DEL ARTÍCULO
+         ======================================== -->
+    <div class="article-wrapper">
+        <div class="article-layout">
+            <!-- ========================================
+                 MAIN: Contenido principal del artículo
+                 ======================================== -->
+            <main>
+                <article class="article-main">
+
+                    <div class="article-content">
+                        <!-- ========================================
+                             SECCIÓN: Introducción
+                             ======================================== -->
+                        <section id="introduccion">
+                            <h2>Introducción</h2>
+                            <p>
+                                El baño es fundamental para el cuidado de nuestras mascotas, pero muchos productos
+                                comerciales contienen químicos agresivos que irritan su piel y causan alergias. En
+                                EcoPets CR sabemos que es posible mantener a tu mascota limpia y saludable usando solo
+                                ingredientes naturales que benefician tanto su salud como el medio ambiente.
+                            </p>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: ¿Por qué productos naturales?
+                             ======================================== -->
+                        <section id="por-que-natural">
+                            <h2>¿Por qué productos naturales?</h2>
+                            <p>
+                                La piel de las mascotas es mucho más sensible que la humana. Los shampoos convencionales
+                                contienen sulfatos, parabenos y fragancias artificiales que causan resequedad, picazón e
+                                irritación. Los ingredientes naturales son biodegradables, suaves con la piel y no
+                                contaminan el agua.
+                            </p>
+
+                            <!-- Subsección: Químicos a evitar -->
+                            <h3>Químicos comunes a evitar</h3>
+
+                            <!-- Tabla semántica con químicos nocivos -->
+                            <table class="therapy-table">
+                                <thead>
+                                    <tr>
+                                        <th>Químico</th>
+                                        <th>Se encuentra en</th>
+                                        <th>Efectos negativos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Sulfatos (SLS/SLES)</strong></td>
+                                        <td>Shampoos comerciales</td>
+                                        <td>Resequedad, irritación, alergias cutáneas</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Parabenos</strong></td>
+                                        <td>Conservantes en productos</td>
+                                        <td>Alteración hormonal, reacciones alérgicas</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fragancias artificiales</strong></td>
+                                        <td>Perfumes sintéticos</td>
+                                        <td>Irritación respiratoria, dermatitis</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Colorantes artificiales</strong></td>
+                                        <td>Tintes cosméticos</td>
+                                        <td>Toxicidad acumulativa, alergias</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Ingredientes efectivos
+                             ======================================== -->
+                        <section id="ingredientes">
+                            <h2>Ingredientes efectivos</h2>
+                            <p>
+                                Estos ingredientes naturales han demostrado ser seguros y efectivos para el cuidado del
+                                pelaje y la piel de las mascotas:
+                            </p>
+
+                            <!-- Subsección: Avena Coloidal -->
+                            <h3>Avena Coloidal</h3>
+                            <p>
+                                Calma la piel sensible y reduce irritaciones. Muele avena en polvo fino y agrégala al
+                                agua del baño. Es especialmente efectiva para mascotas con dermatitis atópica o piel
+                                seca.
+                            </p>
+
+                            <!-- Subsección: Vinagre de Manzana -->
+                            <h3>Vinagre de Manzana</h3>
+                            <p>
+                                Equilibra el pH, elimina olores y repele pulgas. Mezcla una parte con tres de agua como
+                                enjuague final. También ayuda a desenredar el pelaje y añade brillo natural.
+                            </p>
+
+                            <!-- Subsección: Aceite de Coco -->
+                            <h3>Aceite de Coco</h3>
+                            <p>
+                                Antibacteriano natural que hidrata el pelaje y reduce la caspa. Rico en ácidos grasos
+                                que
+                                nutren la piel desde el interior. Aplica en pequeñas cantidades para evitar exceso de
+                                grasa.
+                            </p>
+
+                            <!-- Subsección: Bicarbonato de Sodio -->
+                            <h3>Bicarbonato de Sodio</h3>
+                            <p>
+                                Neutraliza olores y limpia profundamente sin irritar. Es especialmente útil para
+                                mascotas
+                                que se ensucian frecuentemente o tienen olor fuerte.
+                            </p>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Receta de Shampoo Natural
+                             ======================================== -->
+                        <section id="receta">
+                            <h2>Receta de Shampoo Natural</h2>
+
+                            <!-- Subsección: Ingredientes -->
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>1 taza de jabón de Castilla líquido</li>
+                                <li>1 taza de agua destilada</li>
+                                <li>1/3 taza de vinagre de manzana</li>
+                                <li>2 cucharadas de aceite de coco</li>
+                            </ul>
+
+                            <!-- Subsección: Preparación (lista ordenada) -->
+                            <h3>Preparación</h3>
+                            <ol>
+                                <li>
+                                    <strong>Preparar el recipiente:</strong> Esteriliza una botella de plástico o vidrio
+                                    con agua hirviendo. Déjala secar completamente antes de usar.
+                                </li>
+                                <li>
+                                    <strong>Mezclar ingredientes:</strong> Vierte el jabón de Castilla en la botella,
+                                    seguido del agua destilada. Agita suavemente para integrar.
+                                </li>
+                                <li>
+                                    <strong>Agregar vinagre:</strong> Incorpora el vinagre de manzana lentamente
+                                    mientras
+                                    agitas la botella. Esto ayuda a balancear el pH.
+                                </li>
+                                <li>
+                                    <strong>Derretir aceite:</strong> Calienta el aceite de coco hasta que esté líquido
+                                    y
+                                    añádelo a la mezcla. Agita vigorosamente.
+                                </li>
+                                <li>
+                                    <strong>Almacenamiento:</strong> Etiqueta la botella con la fecha de preparación.
+                                    Guarda en lugar fresco y seco. Dura hasta 2 meses.
+                                </li>
+                            </ol>
+
+                            <!-- Nota importante sobre la preparación -->
+                            <p><em>Nota: Agita bien antes de cada uso, ya que los ingredientes naturales pueden
+                                    separarse.</em></p>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Guía rápida de baño
+                             ======================================== -->
+                        <section id="guia-bano">
+                            <h2>Guía rápida de baño</h2>
+
+                            <!-- Tabla con las etapas del baño -->
+                            <table class="therapy-table">
+                                <thead>
+                                    <tr>
+                                        <th>Etapa</th>
+                                        <th>Acciones</th>
+                                        <th>Consejos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Antes del baño</strong></td>
+                                        <td>
+                                            • Cepilla el pelaje para eliminar nudos<br>
+                                            • Verifica temperatura del agua (tibia)<br>
+                                            • Prepara todos los productos
+                                        </td>
+                                        <td>El agua debe estar entre 37-39°C. Usa tu codo para verificar la temperatura.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Durante el baño</strong></td>
+                                        <td>
+                                            • Moja completamente evitando ojos y oídos<br>
+                                            • Aplica shampoo desde el cuello<br>
+                                            • Masajea suavemente<br>
+                                            • Enjuaga abundantemente
+                                        </td>
+                                        <td>Habla con voz calmada y ofrece premios. Asegúrate de eliminar todo el jabón.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Después del baño</strong></td>
+                                        <td>
+                                            • Seca con toallas absorbentes<br>
+                                            • Cepilla cuando esté seco<br>
+                                            • Recompensa a tu mascota<br>
+                                            • Limpia el área de baño
+                                        </td>
+                                        <td>Evita corrientes de aire. Puedes usar secador en temperatura baja si tu
+                                            mascota
+                                            lo tolera.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Beneficios de los baños naturales
+                             ======================================== -->
+                        <section id="beneficios">
+                            <h2>Beneficios de los baños naturales</h2>
+                            <p>
+                                La transición a productos naturales trae múltiples ventajas tanto para tu mascota como
+                                para el medio ambiente:
+                            </p>
+
+                            <!-- Lista de beneficios -->
+                            <ul>
+                                <li><strong>Pelaje brillante y saludable:</strong> Los ingredientes naturales nutren el
+                                    pelo desde la raíz, proporcionando un brillo duradero sin productos artificiales.
+                                </li>
+                                <li><strong>Reducción de alergias:</strong> Al eliminar químicos irritantes, disminuyen
+                                    las reacciones alérgicas y la sensibilidad cutánea.</li>
+                                <li><strong>Piel hidratada:</strong> Los aceites naturales mantienen la barrera cutánea
+                                    saludable, previniendo resequedad y descamación.</li>
+                                <li><strong>Experiencia relajante:</strong> Los aromas naturales y la ausencia de
+                                    químicos
+                                    agresivos hacen que el baño sea más placentero para tu mascota.</li>
+                                <li><strong>Protección ambiental:</strong> Productos biodegradables que no contaminan el
+                                    agua ni dañan ecosistemas acuáticos.</li>
+                                <li><strong>Económico:</strong> Los ingredientes naturales suelen ser más accesibles que
+                                    productos comerciales especializados.</li>
+                            </ul>
+
+                            <!-- Subsección: Precauciones -->
+                            <h3>Precauciones importantes</h3>
+                            <p>
+                                <strong>Prueba de parche:</strong> Antes de usar cualquier producto nuevo, aplica una
+                                pequeña cantidad en un área reducida del pelaje y espera 24 horas para verificar que no
+                                haya reacciones adversas.
+                            </p>
+                            <p>
+                                <strong>Consulta veterinaria:</strong> Si tu mascota tiene problemas dermatológicos,
+                                alergias conocidas o condiciones de piel preexistentes, consulta con tu veterinario
+                                antes
+                                de cambiar su rutina de baño.
+                            </p>
+                        </section>
+
+                        <!-- ========================================
+                             SECCIÓN: Conclusión
+                             ======================================== -->
+                        <section id="conclusion">
+                            <h2>Conclusión</h2>
+                            <p>
+                                Los baños naturales son la mejor alternativa saludable para tu mascota. Representan una
+                                inversión en su bienestar a largo plazo y una contribución positiva al medio ambiente.
+                            </p>
+                            <p>
+                                En EcoPets CR ofrecemos productos certificados y servicio profesional con ingredientes
+                                100% orgánicos. Nuestro equipo puede asesorarte en la selección de los mejores productos
+                                naturales según las necesidades específicas de tu compañero. Visítanos y descubre cómo
+                                cuidar a tu mascota de forma natural y sostenible.
+                            </p>
+                        </section>
+                    </div>
+
+                    <!-- ========================================
+                         SECCIÓN: Comentarios de usuarios
+                         ======================================== -->
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h2>
+                                <span class="material-symbols-outlined">comment</span> Comentarios
+                            </h2>
+                            <!-- Badge con el número de comentarios -->
+                            <span
+                                style="background: var(--naranja-suave); color: var(--blanco); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600;">5</span>
+                        </div>
+
+                        <!-- Comentario individual #1 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/nina.png" alt="Lucía Herrera" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Lucía Herrera</h4>
+                                    <span class="comment-date">14 de Octubre, 2025 - 3:20 PM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                Hice el shampoo casero y quedé impresionada! Mi poodle tiene piel muy sensible y siempre
+                                reaccionaba mal a los productos comerciales. Con esta receta su pelaje quedó suave,
+                                brillante y sin ninguna irritación. Definitivamente seguiré usando productos naturales.
+                            </p>
+                        </div>
+
+                        <!-- Comentario individual #2 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/perfil.png" alt="Daniel Mora" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Daniel Mora</h4>
+                                    <span class="comment-date">14 de Octubre, 2025 - 11:45 AM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                La tabla comparativa de químicos a evitar es muy útil. Nunca me había detenido a leer
+                                los
+                                ingredientes de los shampoos que usaba. Ahora entiendo por qué mi labrador tenía tanta
+                                picazón después del baño. Gracias por compartir información tan valiosa.
+                            </p>
+                        </div>
+
+                        <!-- Comentario individual #3 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/nina.png" alt="Gabriela Quesada" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Gabriela Quesada</h4>
+                                    <span class="comment-date">13 de Octubre, 2025 - 5:30 PM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                Excelente artículo. Me encanta que incluyan la guía paso a paso del baño. Mis gatos
+                                siempre han sido un desafío para bañar, pero con estos consejos y productos naturales la
+                                experiencia fue mucho menos estresante para todos.
+                            </p>
+                        </div>
+
+                        <!-- Comentario individual #4 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/perfil.png" alt="Esteban Rojas" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Esteban Rojas</h4>
+                                    <span class="comment-date">13 de Octubre, 2025 - 9:15 AM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                ¿Cuánto tiempo dura el shampoo casero? ¿Necesita refrigeración? Quiero preparar una
+                                mayor
+                                cantidad pero me preocupa que se eche a perder.
+                            </p>
+                        </div>
+
+                        <!-- Comentario individual #5 -->
+                        <div class="comment">
+                            <div class="comment-header">
+                                <img src="imagenes/nina.png" alt="Carolina Vega" class="comment-avatar">
+                                <div class="comment-author-info">
+                                    <h4>Carolina Vega</h4>
+                                    <span class="comment-date">12 de Octubre, 2025 - 7:50 PM</span>
+                                </div>
+                            </div>
+                            <p class="comment-text">
+                                El vinagre de manzana ha sido mágico para mi golden retriever. Siempre tenía un olor
+                                fuerte
+                                incluso después del baño, pero con el enjuague de vinagre el olor desapareció por
+                                completo
+                                y su pelo quedó súper brillante. Totalmente recomendado!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================================
+                         FORMULARIO: Nuevo comentario
+                         ======================================== -->
+                    <div class="comment-form">
+                        <h3>Deja tu Comentario</h3>
+                        <!-- Formulario con validación HTML5 -->
+                        <form id="commentForm">
+                            <!-- Campo: Nombre -->
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                            </div>
+
+                            <!-- Campo: Email -->
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+
+                            <!-- Campo: Comentario -->
+                            <div class="form-group">
+                                <label for="comentario">Comentario:</label>
+                                <textarea id="comentario" name="comentario" required
+                                    placeholder="Escribe tu comentario aquí..." rows="5"></textarea>
+                            </div>
+
+                            <!-- Botón de envío -->
+                            <button type="submit" class="btn btn-primary">Publicar</button>
+                        </form>
+                    </div>
+                </article>
+            </main>
+
+            <!-- ========================================
+                 ASIDE: Barra lateral con información adicional
+                 ======================================== -->
+            <aside class="article-sidebar">
+                <!-- Card: Índice de contenidos -->
+                <div class="sidebar-card">
+                    <h3>Índice del Artículo</h3>
+                    <!-- Lista de enlaces de navegación interna -->
+                    <ul class="table-of-contents">
+                        <li><a href="#introduccion">Introducción</a></li>
+                        <li><a href="#por-que-natural">¿Por qué productos naturales?</a></li>
+                        <li><a href="#ingredientes">Ingredientes efectivos</a></li>
+                        <li><a href="#receta">Receta de Shampoo Natural</a></li>
+                        <li><a href="#guia-bano">Guía rápida de baño</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#conclusion">Conclusión</a></li>
+                    </ul>
+                </div>
+
+                <!-- Card: Información del autor -->
+                <div class="sidebar-card author-card">
+                    <h3>Sobre el Autor</h3>
+                    <img src="imagenes/nina.png" alt="María Fernández" class="author-avatar">
+                    <div class="author-name">María Fernández</div>
+                    <div class="author-role">Especialista en Productos Naturales</div>
+                    <div class="author-exp">15 años de experiencia</div>
+                    <a href="contacto.html" class="btn btn-primary" style="width: 100%;">Contactar</a>
+                </div>
+
+                <!-- Card: Call-to-Action (llamado a la acción) -->
+                <div class="sidebar-card cta-card">
+                    <h3>
+                        <span class="material-symbols-outlined">bathtub</span> Servicio de Baño Natural
+                    </h3>
+                    <p>Prueba nuestro servicio profesional de baño con productos 100% naturales y orgánicos.</p>
+                    <a href="contacto.html" class="btn btn-outline"
+                        style="background: var(--blanco); color: var(--verde-bosque); width: 100%;">Reservar Cita</a>
+                </div>
+
+                <!-- Card: Artículos relacionados -->
+                <div class="sidebar-card">
+                    <h3>Artículos Relacionados</h3>
+
+                    <!-- Artículo relacionado #1 -->
+                    <div class="related-article" onclick="window.location.href='reducir-estres-mascota.html'">
+                        <img src="imagenes/mascota-estresada.jpg" alt="Reducir estrés">
+                        <div class="related-content">
+                            <h4>
+                                <span class="material-symbols-outlined" style="font-size: 1rem;">self_improvement</span>
+                                Cómo Reducir el Estrés en Tu Mascota
+                            </h4>
+                            <p>7 min lectura</p>
+                        </div>
+                    </div>
+
+                    <!-- Artículo relacionado #2 -->
+                    <div class="related-article" onclick="window.location.href='holistica.html'">
+                        <img src="imagenes/perro-holistica.webp" alt="Medicina holística">
+                        <div class="related-content">
+                            <h4>
+                                <span class="material-symbols-outlined" style="font-size: 1rem;">spa</span>
+                                Beneficios de la Medicina Holística
+                            </h4>
+                            <p>5 min lectura</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- ========================================
+         FOOTER: Pie de página
+         ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Sección de información de la empresa -->
+            <div class="footer-section">
+                <h3>EcoPets CR</h3>
+                <p>Productos ecológicos y sostenibles para el cuidado de tus mascotas.</p>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">eco</span>
+                    Cuida a tu mascota, cuida el planeta
+                </p>
+            </div>
+
+            <!-- Sección de enlaces rápidos -->
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="nosotros.html">Nosotros</a></p>
+                <p><a href="blog.html">Blog</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+
+            <!-- Sección de información de contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>
+                    <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">mail</span>
+                    info@ecopetscr.com
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">phone</span>
+                    +506 8888-9999
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 1rem; vertical-align: middle;">location_on</span>
+                    San José, Costa Rica
+                </p>
+            </div>
+
+            <!-- Sección de redes sociales -->
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://X.com/" aria-label="X (Twitter)" class="social-icon twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoPets CR | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         BOTÓN FLOTANTE: Menú índice móvil
+         ======================================== -->
+    <!-- Botón flotante para mostrar el índice en dispositivos móviles -->
+    <button id="floatingTocBtn" class="toggle-toc" aria-label="Mostrar índice">
+        <span class="material-symbols-outlined">list</span>
+    </button>
+
+    <!-- Overlay oscuro para el menú móvil (fondo semitransparente) -->
+    <div id="mobileTocOverlay" class="mobile-toc-overlay"></div>
+
+    <!-- Menú lateral móvil con índice de contenido -->
+    <aside id="mobileTocMenu" class="mobile-toc-menu">
+        <div class="mobile-toc-content">
+            <!-- Botón para cerrar el menú lateral -->
+            <button id="mobileTocClose" class="close-toc" aria-label="Cerrar índice">×</button>
+
+            <h3>Índice de contenido</h3>
+
+            <!-- Enlaces del índice que redirigen a secciones del artículo -->
+            <ul class="table-of-contents">
+                <li><a href="#introduccion" class="mobile-toc-link">Introducción</a></li>
+                <li><a href="#por-que-natural" class="mobile-toc-link">¿Por qué productos naturales?</a></li>
+                <li><a href="#ingredientes" class="mobile-toc-link">Ingredientes efectivos</a></li>
+                <li><a href="#receta" class="mobile-toc-link">Receta de Shampoo Natural</a></li>
+                <li><a href="#guia-bano" class="mobile-toc-link">Guía rápida de baño</a></li>
+                <li><a href="#beneficios" class="mobile-toc-link">Beneficios</a></li>
+                <li><a href="#conclusion" class="mobile-toc-link">Conclusión</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Archivo JavaScript externo para funcionalidad interactiva -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
