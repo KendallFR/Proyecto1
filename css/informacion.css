@@ -119,3 +119,79 @@
   .page-productos .mobile-link.active{ background:#F9A825; color:#2E7D32; transform: translateX(4px) }
   .page-productos .mobile-cta{ display:block; margin:1rem auto 0; padding:.8rem 1.6rem; background:#F9A825; color:#2E7D32; font-weight:700; text-align:center; border-radius:30px; box-shadow:0 8px 20px rgba(249,168,37,.3); text-decoration:none }
 }
+
+/* Evita que el <footer> dentro del blockquote herede el estilo del pie del sitio */
+.page-info .ts-card footer{
+  background: transparent !important;
+  padding: 0 !important;
+  margin-top: .5rem !important;
+  color: #6b7b6d !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* ===============================
+   GALERÍA (info.html)
+=============================== */
+.page-info .gallery-block {
+  padding: 4rem 2rem;
+  background: #fefefe;
+  text-align: center;
+}
+
+.page-info .gal-head h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2e7d32;
+}
+
+.page-info .gal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.page-info .gal-item {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-info .gal-item img {
+  width: 100%;
+  height: 200px; /* todas iguales */
+  object-fit: cover; /* recorta sin deformar */
+  display: block;
+}
+
+.page-info .gal-item figcaption {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Hover animado */
+.page-info .gal-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+.media-video iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+
