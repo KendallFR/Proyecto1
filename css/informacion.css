@@ -101,24 +101,7 @@
 .page-info .reveal{ opacity:0; transform:translateY(20px); transition:opacity .7s, transform .7s }
 .page-info .reveal.visible{ opacity:1; transform:none }
 
-/* ====== Ajuste del menú móvil verde (mismo fix que te pasé) ====== */
-@media (max-width: 768px){
-  .page-productos .menu-toggle{ display:inline-flex; z-index:1300 }
-  .page-productos .main-nav{ display:none }
-  .page-productos .mobile-nav{
-    position: fixed; top: 80px; right: 1rem; width: 220px;
-    background:#2E7D32; border-radius:20px;
-    box-shadow:0 6px 20px rgba(0,0,0,.25);
-    transform: translateX(120%); transition: transform .35s ease;
-    z-index:1300; display:flex; flex-direction:column; padding:1rem;
-  }
-  .page-productos .mobile-nav[aria-hidden="false"]{ transform: translateX(0) }
-  .page-productos .mobile-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px }
-  .page-productos .mobile-link{ display:block; padding:.75rem 1rem; font-size:1.05rem; font-weight:700; color:#fff; text-decoration:none; border-radius:12px; transition:background .3s, transform .3s }
-  .page-productos .mobile-link:hover,
-  .page-productos .mobile-link.active{ background:#F9A825; color:#2E7D32; transform: translateX(4px) }
-  .page-productos .mobile-cta{ display:block; margin:1rem auto 0; padding:.8rem 1.6rem; background:#F9A825; color:#2E7D32; font-weight:700; text-align:center; border-radius:30px; box-shadow:0 8px 20px rgba(249,168,37,.3); text-decoration:none }
-}
+
 
 /* Evita que el <footer> dentro del blockquote herede el estilo del pie del sitio */
 .page-info .ts-card footer{

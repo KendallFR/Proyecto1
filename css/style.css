@@ -1,6 +1,3 @@
-/* ========================================
-   VARIABLES CSS GLOBALES
-   ======================================== */
 :root {
     --verde-bosque: #2E7D32;
     --verde-claro: #43A047;
@@ -11,9 +8,6 @@
     --negro: #333333;
 }
 
-/* ========================================
-   RESET Y ESTILOS BASE
-   ======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -31,9 +25,10 @@ body {
     background-color: var(--blanco);
 }
 
-/* ========================================
-   TIPOGRAFÍA
-   ======================================== */
+body.no-scroll {
+    overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -77,18 +72,15 @@ img {
     display: block;
 }
 
-/* ========================================
-   HEADER
-   ======================================== */
 header {
-    background: linear-gradient(180deg, rgba(46,125,50,0.06), rgba(46,125,50,0.02));
+    background: linear-gradient(180deg, rgba(46, 125, 50, 0.06), rgba(46, 125, 50, 0.02));
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     padding: 0.875rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(46,125,50,0.05);
+    border-bottom: 1px solid rgba(46, 125, 50, 0.05);
     transition: backdrop-filter 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
 }
 
@@ -124,7 +116,7 @@ header.scrolled {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(46,125,50,0.12), 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.35s;
 }
 
@@ -144,12 +136,9 @@ header.scrolled {
 
 .logo:hover .logo-circle {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(46,125,50,0.14);
+    box-shadow: 0 16px 40px rgba(46, 125, 50, 0.14);
 }
 
-/* ========================================
-   NAVEGACIÓN
-   ======================================== */
 nav ul {
     list-style: none;
     display: flex;
@@ -162,8 +151,8 @@ nav a {
     font-weight: 600;
     padding: 0.75rem 1.125rem;
     border-radius: 999px;
-    background: rgba(46,125,50,0.06);
-    box-shadow: 0 6px 18px rgba(46,125,50,0.04);
+    background: rgba(46, 125, 50, 0.06);
+    box-shadow: 0 6px 18px rgba(46, 125, 50, 0.04);
     transition: all 0.22s ease;
     position: relative;
     text-decoration: none;
@@ -173,13 +162,13 @@ nav a:hover {
     transform: translateY(-4px);
     background: var(--naranja-suave);
     color: var(--blanco);
-    box-shadow: 0 16px 40px rgba(249,168,37,0.18);
+    box-shadow: 0 16px 40px rgba(249, 168, 37, 0.18);
 }
 
 nav a.active {
     background: var(--naranja-suave);
     color: var(--blanco);
-    box-shadow: 0 12px 30px rgba(249,168,37,0.15);
+    box-shadow: 0 12px 30px rgba(249, 168, 37, 0.15);
 }
 
 .menu-toggle {
@@ -189,18 +178,38 @@ nav a.active {
     border-radius: 8px;
     border: 0;
     background: transparent;
-    color: var(--verde-bosque);
-    font-size: 1.8rem;
     cursor: pointer;
     position: relative;
     z-index: 1300;
-    order: 3;
-    margin-left: auto;
 }
 
-/* ========================================
-   LAYOUT GENERAL
-   ======================================== */
+.hamburger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--verde-bosque);
+    position: relative;
+    margin: 0 auto;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--verde-bosque);
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -231,9 +240,6 @@ section {
     border-radius: 2px;
 }
 
-/* ========================================
-   BOTONES
-   ======================================== */
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
@@ -277,9 +283,6 @@ section {
     color: var(--blanco);
 }
 
-/* ========================================
-   CARDS
-   ======================================== */
 .card {
     background: var(--blanco);
     border-radius: 10px;
@@ -313,9 +316,6 @@ section {
     margin-bottom: 1rem;
 }
 
-/* ========================================
-   FORMULARIOS
-   ======================================== */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -356,9 +356,6 @@ textarea {
     min-height: 120px;
 }
 
-/* ========================================
-   LISTAS ESTILIZADAS
-   ======================================== */
 .list-styled {
     list-style: none;
     padding-left: 0;
@@ -377,9 +374,6 @@ textarea {
     font-size: 1.2rem;
 }
 
-/* ========================================
-   TABLAS
-   ======================================== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -405,11 +399,8 @@ tr:hover {
     background-color: rgba(67, 160, 71, 0.05);
 }
 
-/* ========================================
-   FOOTER
-   ======================================== */
 footer {
-    background: linear-gradient(180deg,#0b1f0d, #04210a);
+    background: linear-gradient(180deg, #0b1f0d, #04210a);
     color: var(--blanco);
     padding: 3rem 0 1rem;
     margin-top: 4rem;
@@ -460,7 +451,7 @@ footer {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background: var(--verde-claro);
+    background: linear-gradient(180deg, #0b1f0d, #04210a);
     color: var(--blanco);
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -505,9 +496,6 @@ footer {
     opacity: 0.8;
 }
 
-/* ========================================
-   SISTEMA DE GRID
-   ======================================== */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -526,9 +514,6 @@ footer {
     gap: 2rem;
 }
 
-/* ========================================
-   UTILIDADES DE LAYOUT
-   ======================================== */
 .flex-center {
     display: flex;
     justify-content: center;
@@ -549,9 +534,6 @@ footer {
     text-align: right;
 }
 
-/* ========================================
-   UTILIDADES DE ESPACIADO
-   ======================================== */
 .mb-1 {
     margin-bottom: 1rem;
 }
@@ -576,9 +558,6 @@ footer {
     margin-top: 3rem;
 }
 
-/* ========================================
-   ICONOS DE GOOGLE MATERIAL
-   ======================================== */
 .material-symbols-outlined {
     font-size: 1.2em;
     vertical-align: middle;
@@ -591,9 +570,6 @@ footer {
     margin-right: 0.3rem;
 }
 
-/* ========================================
-   RESPONSIVE - TABLET (1024px o menos)
-   ======================================== */
 @media (max-width: 1024px) {
     .container {
         padding: 1.5rem;
@@ -615,24 +591,21 @@ footer {
     footer {
         padding: 2.5rem 0 1rem;
     }
-    
+
     .header-container {
         padding: 0 1.5rem;
     }
-    
+
     nav ul {
         gap: 0.5rem;
     }
-    
+
     nav a {
         padding: 0.625rem 0.875rem;
         font-size: 0.9rem;
     }
 }
 
-/* ========================================
-   RESPONSIVE - MÓVIL (768px o menos)
-   ======================================== */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -645,7 +618,7 @@ footer {
     h3 {
         font-size: 1.3rem;
     }
-    
+
     header {
         padding: 0.75rem 0;
     }
@@ -661,16 +634,16 @@ footer {
         flex: 1;
         order: 1;
     }
-    
+
     .logo-circle {
         width: 64px;
         height: 64px;
     }
-    
+
     .logo img {
         width: 46px;
     }
-    
+
     .logo h1 {
         font-size: 1.2rem;
     }
@@ -688,18 +661,28 @@ footer {
 
     nav ul {
         flex-direction: column;
-        gap: 0;
-        padding: 0;
+        gap: 0.75rem;
+        padding: 1.25rem;
         display: none;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(46,125,50,0.98), rgba(67,160,71,0.98));
-        border-radius: 12px;
+        width: calc(100% - 2rem);
+        background: linear-gradient(180deg, rgba(46, 125, 50, 0.98), rgba(67, 160, 71, 0.98));
+        border-radius: 18px;
         margin-top: 0.5rem;
-        overflow: hidden;
+        box-shadow: 0 30px 80px rgba(46, 125, 50, 0.28);
+        position: fixed;
+        top: 5rem;
+        left: 1rem;
+        right: 1rem;
+        z-index: 1299;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.35s ease, transform 0.35s ease;
     }
 
     nav.active ul {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     nav li {
@@ -708,14 +691,19 @@ footer {
 
     nav a {
         display: block;
-        padding: 1rem;
+        padding: 0.75rem;
         border-radius: 0;
         background: transparent;
         color: var(--blanco);
         box-shadow: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-weight: 700;
     }
-    
+
+    nav li:last-child a {
+        border-bottom: none;
+    }
+
     nav a:hover,
     nav a.active {
         background: rgba(255, 255, 255, 0.1);
@@ -792,9 +780,6 @@ footer {
     }
 }
 
-/* ========================================
-   RESPONSIVE - MÓVIL PEQUEÑO (480px o menos)
-   ======================================== */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.7rem;
@@ -812,18 +797,20 @@ footer {
     .card img {
         height: 200px;
     }
-    
+
     .logo-circle {
         width: 56px;
         height: 56px;
     }
-    
+
     .logo img {
         width: 40px;
     }
-    
+
     .logo h1 {
-        display: none;
+        font-weight: 700;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
     }
 
     footer {
