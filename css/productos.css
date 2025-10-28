@@ -285,3 +285,17 @@
   .page-productos .hero-products .hero-title { font-size: 1.6rem; }
   .page-productos .product-grid { grid-template-columns: 1fr; gap: 1.2rem; }
 }
+
+
+/* Contenedor de la imagen */
+.page-productos .product-card img {
+  width: 100%;
+  max-width: 200px;          /* tamaño máximo uniforme */
+  height: 200px;             /* altura fija */
+  object-fit: contain;       /* mantiene proporción sin recortar */
+  display: block;
+  margin: 0 auto 1rem;       /* centra horizontal y agrega margen abajo */
+  border-radius: 18px;
+  background: #fffdf7;       /* fondo blanco para que no se vean huecos feos */
+  padding: 10px;             /* espacio interno para que no pegue al borde */
+}

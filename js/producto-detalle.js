@@ -93,3 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+// Calificación por estrellas
+const stars = document.querySelectorAll('.rating .star');
+const inputCalificacion = document.getElementById('calificacion');
+
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    inputCalificacion.value = star.dataset.value;
+    stars.forEach(s => s.classList.remove('seleccionada'));
+    star.classList.add('seleccionada');
+    // colorea todas las estrellas hasta la seleccionada
+    let valor = parseInt(star.dataset.value);
+    stars.forEach(s => {
+      if (parseInt(s.dataset.value) <= valor) {
+        s.classList.add('seleccionada');
+      }
+    });
+  });
+});
+
+

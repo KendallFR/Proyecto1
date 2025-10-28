@@ -34,6 +34,21 @@
       </ul>
     </nav>
 
+        <!-- Mobile nav (overlay) -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+     <ul>
+    <li><a href="index.html" class="mobile-link">Inicio</a></li>
+    <li><a href="#nosotros" class="mobile-link">Nosotros</a></li>
+    <li><a href="blog.html" class="mobile-link">Blog</a></li>
+    <li><a href="contacto.html" class="mobile-link">Contacto</a></li>
+    <li><a href="productos.html" class="mobile-link">Productos</a></li>
+    <li><a href="faq.html" class="mobile-link">Preguntas frecuentes</a></li>
+    <li><a href="acerca-de.html" class="mobile-link">Acerca de</a></li>
+  </ul>
+    </div>
+
+
+
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
       <span class="material-symbols-outlined">menu</span>
     </button>
@@ -50,16 +65,16 @@
       <button class="next">❯</button>
     </div>
     <div class="miniaturas">
-      <img src="images/blog1.jpg" class="thumb active" alt="Vista 1">
-      <img src="images/blog2.jpg" class="thumb" alt="Vista 2">
-      <img src="images/blog3.jpg" class="thumb" alt="Vista 3">
-      <img src="images/estetica.jpg" class="thumb" alt="Vista 4">
+      <img src="images/P1.jpg" class="thumb active" alt="Vista 1">
+      <img src="images/p12.jpg" class="thumb" alt="Vista 2">
+      <img src="images/p123.jpg" class="thumb" alt="Vista 3">
+      <img src="images/p1234.jpg" class="thumb" alt="Vista 4">
     </div>
   </section>
 
   <!-- INFORMACIÓN DEL PRODUCTO -->
   <section class="info">
-    <h1>Alimento Orgánico Premium</h1>
+    <h1>Alimento Orgánico</h1>
     <p class="descripcion">
       Alimento 100% natural con ingredientes orgánicos certificados, sin conservantes ni colorantes. 
       Ideal para perros de todas las edades. Mejora la digestión, fortalece el pelaje y aporta energía de forma saludable.
@@ -86,27 +101,84 @@
       <h2>Productos relacionados</h2>
       <div class="grid">
         <article class="service-card reveal">
-          <img src="images/producto2.jpg" alt="Producto relacionado 1">
-          <h3>Producto relacionado 1</h3>
-          <p>Breve descripción del producto.</p>
+          <img src="images/adicionalp1.jpg" alt="Producto relacionado 1">
+          <h3>🐶 Full Life Adulto – Razas Medianas y Grandes (4 kg)</h3>
+          <p>Con proteína de alta calidad para fortalecer músculos, defensas y articulaciones.
+Ideal para perros adultos activos.</p>
           <a href="#" class="card-link">Ver más →</a>
         </article>
         <article class="service-card reveal">
-          <img src="images/producto3.jpg" alt="Producto relacionado 2">
-          <h3>Producto relacionado 2</h3>
-          <p>Breve descripción del producto.</p>
+          <img src="images/adicionalp2.jpg" alt="Producto relacionado 2">
+          <h3>🐕 Pedigree Adulto – Completo y Saludable (20 kg)</h3>
+          <p>Nutrición equilibrada con res y vegetales para perros adultos.
+Favorece digestión, energía y bienestar general.</p>
           <a href="#" class="card-link">Ver más →</a>
         </article>
         <article class="service-card reveal">
-          <img src="images/producto4.jpg" alt="Producto relacionado 3">
-          <h3>Producto relacionado 3</h3>
-          <p>Breve descripción del producto.</p>
+          <img src="images/adicionalp3.jpg" alt="Producto relacionado 3">
+          <h3>🐾 NUCAN Adulto – Razas Medianas y Grandes (25 kg)</h3>
+          <p>Fórmula con alta digestibilidad y palatabilidad, ideal para perros exigentes.
+Mejora defensas, piel y pelaje.</p>
           <a href="#" class="card-link">Ver más →</a>
         </article>
       </div>
     </div>
   </section>
 </main>
+
+
+<!-- COMENTARIOS Y CALIFICACIONES -->
+<section class="comentarios">
+  <div class="container">
+    <h2>Opiniones de clientes</h2>
+
+    <!-- Formulario -->
+    <form class="comentario-form">
+      <div class="form-group">
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-group">
+        <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe tu experiencia..." required></textarea>
+      </div>
+
+      <!-- Estrellas de 1 → 5 -->
+      <div class="rating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+      <input type="hidden" id="calificacion" name="calificacion" value="0">
+
+      <button type="submit" class="btn-comprar">Enviar</button>
+    </form>
+
+    <!-- Lista de comentarios -->
+    <div class="comentarios-lista">
+      <article class="comentario">
+        <div class="comentario-header">
+          <span class="icon">🐶</span>
+          <h4>María López</h4>
+          <span class="estrellas">★★★★★</span>
+        </div>
+        <p>¡Excelente producto! Mi perro lo adora y he visto mejoras en su pelaje.</p>
+      </article>
+
+      <article class="comentario">
+        <div class="comentario-header">
+          <span class="icon">🐾</span>
+          <h4>Juan Pérez</h4>
+          <span class="estrellas">★★★★☆</span>
+        </div>
+        <p>Muy bueno, aunque me gustaría presentaciones más pequeñas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
 
 <!-- ========================================
          FOOTER: Pie de página
