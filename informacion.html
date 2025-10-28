@@ -13,55 +13,49 @@
   <link rel="stylesheet" href="css/informacion.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body class="page-productos page-info"><!-- reutiliza scope .page-productos para heredar tu header/footer -->
 
-  <!-- ================== HEADER (idéntico al que usas) ================== -->
+  <!-- ================== HEADER (idéntico al index) ================== -->
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="brand" aria-label="EcoPetsCR — Inicio">
         <span class="brand-circle" aria-hidden="true">
           <img src="images/logo.png" alt="Logo EcoPetsCR" class="brand-logo">
         </span>
-        <span class="sr-only">EcoPetsCR</span>
+        <span class="brand-text">EcoPetsCR</span>
       </a>
 
-      <nav class="main-nav" role="navigation" aria-label="Menú principal">
+      <nav class="main-nav">
         <ul class="nav-list">
-          <li><a class="nav-link" href="index.html#servicios">Servicios</a></li>
-          <li><a class="nav-link" href="index.html#nosotros">Nosotros</a></li>
-          <li><a class="nav-link" href="index.html#blog">Blog</a></li>
-          <li><a class="nav-link" href="index.html#contacto">Contacto</a></li>
-          <li><a class="nav-link" href="productos.html">Productos</a></li>
-          <li><a class="nav-link active" href="informacion.html">Información</a></li>
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="informacion.html" class="nav-link active">Nosotros</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="faq.html" class="nav-link">Preguntas frecuentes</a></li>
+          <li><a href="acerca-de.html" class="nav-link">Acerca de</a></li>
         </ul>
       </nav>
 
-      <div class="header-actions">
-        <a href="tel:+50688888888" class="action-circle" aria-label="Llamar a EcoPetsCR">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.13 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a1 1 0 0 1 1 .78c.12.84.33 1.65.62 2.42a1 1 0 0 1-.24 1.02L7.91 8.91a16 16 0 0 0 6 6l1.69-1.69a1 1 0 0 1 1.02-.24c.77.29 1.58.5 2.42.62A1 1 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-
-        <a href="productos.html" class="btn-cta">Conocer más</a>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-          <span class="hamburger"></span>
-        </button>
-      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
 
-    <!-- Menú móvil (hereda tu JS y estilos) -->
+    <!-- Mobile nav -->
     <div class="mobile-nav" id="mobileNav" aria-hidden="true">
       <ul>
-        <li><a href="index.html#servicios" class="mobile-link">Servicios</a></li>
-        <li><a href="index.html#nosotros" class="mobile-link">Nosotros</a></li>
-        <li><a href="index.html#blog" class="mobile-link">Blog</a></li>
-        <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        <li><a href="index.html" class="mobile-link">Inicio</a></li>
+        <li><a href="informacion.html" class="mobile-link active">Nosotros</a></li>
+        <li><a href="blog.html" class="mobile-link">Blog</a></li>
+        <li><a href="contacto.html" class="mobile-link">Contacto</a></li>
         <li><a href="productos.html" class="mobile-link">Productos</a></li>
-        <li><a href="informacion.html" class="mobile-link active">Información</a></li>
+        <li><a href="faq.html" class="mobile-link">Preguntas frecuentes</a></li>
+        <li><a href="acerca-de.html" class="mobile-link">Acerca de</a></li>
         <li><a href="index.html#contacto" class="mobile-cta">Agendar Cita</a></li>
       </ul>
     </div>
@@ -132,7 +126,7 @@
       </div>
     </section>
 
-    <!-- 3. Galería (mínimo 5) -->
+    <!-- 3. Galería -->
     <section id="galeria" class="gallery-block reveal">
       <div class="gal-inner">
         <header class="gal-head">
@@ -141,16 +135,16 @@
         </header>
 
         <div class="gal-grid">
-          <figure class="gal-item"><img src="images/gal1.jpg" alt="Alimento orgánico"><figcaption>Alimento orgánico</figcaption></figure>
-          <figure class="gal-item"><img src="images/gal2.jpg" alt="Consulta veterinaria"><figcaption>Consulta veterinaria</figcaption></figure>
-          <figure class="gal-item"><img src="images/gal3.jpg" alt="Juguetes ecológicos"><figcaption>Juguetes ecológicos</figcaption></figure>
-          <figure class="gal-item"><img src="images/gal4.jpg" alt="Accesorios de cáñamo"><figcaption>Accesorios de cáñamo</figcaption></figure>
-          <figure class="gal-item"><img src="images/gal5.jpg" alt="Camas sostenibles"><figcaption>Camas sostenibles</figcaption></figure>
+          <figure class="gal-item"><img src="images/P1.jpg" alt="Alimento orgánico"><figcaption>Alimento orgánico</figcaption></figure>
+          <figure class="gal-item"><img src="images/consulta.jpg" alt="Consulta veterinaria"><figcaption>Consulta veterinaria</figcaption></figure>
+          <figure class="gal-item"><img src="images/j1.jpg" alt="Juguetes ecológicos"><figcaption>Juguetes ecológicos</figcaption></figure>
+          <figure class="gal-item"><img src="images/CC1.jpg" alt="Accesorios de cáñamo"><figcaption>Accesorios de cáñamo</figcaption></figure>
+          <figure class="gal-item"><img src="images/C1.jpg" alt="Camas sostenibles"><figcaption>Camas sostenibles</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- 4. Multimedia (video + audio) -->
+    <!-- 4. Multimedia -->
     <section id="multimedia" class="media-block reveal">
       <div class="media-inner">
         <header class="media-head">
@@ -158,24 +152,26 @@
           <p class="muted">Conócenos en 1 minuto.</p>
         </header>
 
-        <div class="media-flex">
-          <video class="media-video" controls preload="metadata" poster="images/video-poster.jpg">
-            <source src="media/ecopets-intro.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
+<div class="media-flex">
+  <video class="media-video" controls preload="metadata" poster="images/logo.png" width="100%">
+    <source src="video/Ecopets.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
 
-          <div class="media-audio">
-            <p class="muted">Escucha nuestro mensaje:</p>
-            <audio controls preload="metadata">
-              <source src="media/mensaje-ecopets.mp3" type="audio/mpeg">
-              Tu navegador no soporta audio HTML5.
-            </audio>
-          </div>
-        </div>
-      </div>
+  <div class="media-audio">
+    <p class="muted">Escucha nuestro mensaje:</p>
+    <audio controls preload="metadata">
+      <source src="audio/Ecopets_ 🌱¿Cómo funciona Ecopets Arena Ecológica_🌱.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+  </div>
+</div>
+
+
+
     </section>
 
-    <!-- 5. Testimonios / Evidencia -->
+    <!-- 5. Testimonios -->
     <section id="testimonios" class="testimonials-block reveal">
       <div class="ts-inner">
         <header class="ts-head">
@@ -210,22 +206,42 @@
     </section>
   </main>
 
-  <!-- ================== FOOTER (idéntico) ================== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div>
-        <p class="brand-small">EcoPetsCR</p>
-        <p class="muted">Clínica veterinaria ecológica · San José, Costa Rica</p>
+  <!-- ================== FOOTER (idéntico al index) ================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>EcoPets CR</h3>
+        <p>Productos ecológicos y sostenibles para el cuidado de tus mascotas.</p>
+        <p><span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">eco</span> Cuida a tu mascota, cuida el planeta</p>
       </div>
-      <div class="footer-links">
-        <a href="#">Política de privacidad</a>
-        <a href="#">Términos</a>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <p><a href="index.html">Inicio</a></p>
+        <p><a href="informacion.html">Información</a></p>
+        <p><a href="blog.html">Blog</a></p>
+        <p><a href="contacto.html">Contacto</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><span class="material-symbols-outlined">mail</span> info@ecopetscr.com</p>
+        <p><span class="material-symbols-outlined">phone</span> +506 8888-9999</p>
+        <p><span class="material-symbols-outlined">location_on</span> San José, Costa Rica</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
       </div>
     </div>
-    <p class="copyright">&copy; 2025 EcoPetsCR — Todos los derechos reservados</p>
+    <div class="footer-bottom">
+      <p>&copy; 2025 EcoPets CR | Todos los derechos reservados</p>
+    </div>
   </footer>
 
-  <!-- Tu JS existente (menú móvil, etc.) -->
+  <!-- JS -->
   <script src="js/js.js" defer></script>
 </body>
 </html>
